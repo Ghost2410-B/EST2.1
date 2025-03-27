@@ -1,0 +1,41 @@
+
+
+.dropdown{
+    background-color: rgb(255, 255, 255);
+    width: 15em;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1em;
+    z-index: 999;
+}
+
+.dropdown a{
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown button{
+    width: 100%;
+    height: 3em;
+    border:none;
+    border-bottom: 2px solid gray;
+    background-color: rgb(150, 240, 253);
+}
+
+
+
+
+
+
+
+@keyframes fadein {
+    from{display: none;opacity: 0%;transform: translateY(2em);}
+    to{display: flex; opacity: 100%; transform: translateY(0em);}
+    
+}
+@keyframes fadeout {
+    from{display: flex; opacity: 100%;transform: translateY(0em);}
+    to{display: none;opacity: 0%; transform: translateY(2em);}
+    
+}

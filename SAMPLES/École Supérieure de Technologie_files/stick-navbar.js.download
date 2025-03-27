@@ -1,0 +1,31 @@
+// (function($) {
+//     "use strict";
+
+//     var $navbar = $("#nav-stick"),
+//         y_pos = $navbar.offset().top,
+//         height = $navbar.height(),
+//         winHeight = $(window).height()+130;
+//         console.log(winHeight)
+//         $('body').attr('style', 'min-height:'+ winHeight+ 'px');
+//         var msie6 = $.browser == 'msie' && $.browser.version < 7;
+//         if (!msie6) {
+//             $(window).scroll(function (event) {
+//                 var y = $(this).scrollTop();
+//                     if (y >= y_pos + height) {
+//                         if(!$navbar.hasClass('fixed')){
+//                             $navbar.addClass('fixed').attr('style', 'top: -130px; z-index:3; max-width: 1460px;');
+//                             $('.logo-wrapper').attr('style', 'z-index: 2')
+//                             $('.logo-wrapper').fadeOut();
+//                             $navbar.animate({top: '0'});
+//                         }
+//                     }else{
+//                         $navbar.removeClass('fixed');
+//                         $navbar.attr('style', 'z-index:2')
+//                         $('.logo-wrapper').attr('style', 'z-index: 9999')
+
+//                     }
+//             });
+//         }
+
+
+// })(jQuery, undefined);

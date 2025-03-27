@@ -1,0 +1,258 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+
+footer{
+    background-color: rgb(67, 67, 67);
+    height: fit-content;
+    width: 100dvw;
+    margin-bottom: 0px;
+    margin-left: 0px ;
+    bottom: 0px;
+    border-radius: 1px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+
+#main-footer{
+    height: 90%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 3vw;
+    padding-top: 1em;
+}
+
+.addr-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(21, 101, 170);
+    width: fit-content;
+}
+
+#estfes-logo{
+    margin: 0;
+    border: 2px solid rgb(0, 255, 98);
+    width: 15em;
+}
+#addrs{
+    border: 2px solid red;
+    font-weight: 700;
+    color: rgb(209, 233, 255);
+    width:20em;
+}
+
+.liens{
+    border: 2px solid red;
+    height: fit-content;
+    text-align: left;
+    display: flex;
+    padding: 0px 5em;
+    flex-direction:column ;
+    justify-content: start;
+    align-items: start;
+    gap:1.2em;
+}
+.liens h2{
+    color: rgb(19, 19, 19);
+    font-size:1.8em;
+    font-weight: 1000;
+    text-decoration:underline;
+    font-family:"Work Sans", sans-serif;
+}
+
+#lien{
+    list-style-type: none;
+}
+#lien a{
+    color: rgb(0, 0, 0);
+    font-size: 1.5em;
+    font-weight: 900;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    transition-property: font-size ,color,font-weght;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+}
+#lien a:hover{
+    font-size: 1.7em;
+    font-weight: bolder;
+    color: rgb(41, 41, 41);
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+.contact{
+    border: 2px solid red;
+    background-color: rgba(255, 228, 196, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+    position: relative;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom:2em;
+    height: fit-content;
+}
+
+#call{
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.contact #call h2{
+    color: rgb(19, 19, 19);
+    font-weight: 1000;
+    font-size: 1.8em;
+    text-decoration:underline;
+    font-family:"Work Sans", sans-serif;
+}
+.contact #call p{
+    font-size: 1.4em;
+    font-weight: 1000;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    transition-property: font-size ,color,font-weght;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+}
+
+.contact #call a{
+    text-decoration: none;
+    color: rgb(19, 19, 19);
+}
+
+#call p:hover{
+    font-size: 1.5em;
+    font-weight: bolder;
+    color: rgb(41, 41, 41);
+}
+
+
+
+
+
+#social{
+
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap:1em;
+}
+#social a{
+    text-decoration: none;
+    border: 3px solid rgb(48, 48, 48);
+    border-radius: 20px;
+    padding:10px 20px;
+    font-size: 1.5rem;
+    color:rgb(181, 181, 181);
+    transition-property: transform;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+#social a:hover{
+    transform: scale(110%) translateY(-8px); 
+   color:rgb(37, 37, 37);
+   box-shadow:0px 0px 20px gray;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+#copyright{
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0px;
+    padding: 0.8em 0em;
+
+    height: fit-content;
+    width: 100%;
+    border-top: 3px solid rgba(48, 48, 48, 0.767);
+    
+}
+
+#copyright p{
+    font-size: small;
+    color: rgb(172, 172, 172);
+    font-weight: 600;
+
+}
+
+
+
+/*compatibility*/
+
+
+
+
+
+
+@media (width<1000px) {
+    
+    footer{
+        width: 230dvw;
+    }
+
+    #main-footer{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5em;
+    }
+
+    #estfes-logo{
+        width:150vh;
+    }
+    #addrs{
+        font-size: 2.5em;
+        width: 150vw;
+
+    }
+
+    .liens{
+        font-size: 2.5em;
+
+    }
+    .contact{
+        font-size: 2.5em;
+    }
+    #social a{
+        font-size: 4rem;
+
+    }
+    #copyright{
+    padding: 1em 0em;
+    }
+    #copyright p{
+        font-size: 1.8em;
+    }
+
+}

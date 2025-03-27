@@ -1,0 +1,49 @@
+
+
+
+.sponsors{
+    background-color: #b0b8ba;
+    height: 6vh;
+    width:100vw;
+    overflow: hidden;   
+    align-self: center;
+    justify-self: center;
+}
+
+
+.list{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.sponsors .list img{
+    width: 6em;
+    height: 100%;
+    position: absolute;
+    animation: autoslide 20s linear infinite;
+    animation-delay: calc((20s/10)*(var(--position)));
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+
+.sponsors:hover img{
+    animation-play-state: paused;
+    filter: grayscale(1);
+}
+.sponsors .list img:hover{
+    box-shadow: 0px 0px 100px rgb(27, 20, 31);
+    filter: grayscale(0);
+}
+
+
+
+
+
+@keyframes autoslide {
+    from{transform: translateX(-5em);}
+    to{transform: translateX(60em);}
+    
+}

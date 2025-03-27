@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<!-- saved from url=(0025)https://education.gov.tn/ -->
+<html dir="rtl" lang="ar" class=" js flexbox flexboxlegacy canvas canvastext postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=yes">
+<meta name="HandheldFriendly" content="true">
+
+<link rel="pingback" href="https://education.gov.tn/xmlrpc.php">
+
+<title>الموقع الرسمي لوزارة التربية</title>
+
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="الموقع الرسمي لوزارة التربية « الخلاصة" href="https://education.gov.tn/?feed=rss2">
+<link rel="alternate" type="application/rss+xml" title="الموقع الرسمي لوزارة التربية « خلاصة التعليقات" href="https://education.gov.tn/?feed=comments-rss2">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"https:\/\/education.gov.tn\/wp-includes\/js\/wp-emoji.js?ver=5.2.21","twemoji":"https:\/\/education.gov.tn\/wp-includes\/js\/twemoji.js?ver=5.2.21"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script><script src="https://education.gov.tn/wp-includes/js/twemoji.js?ver=5.2.21" type="text/javascript" defer=""></script><script src="https://education.gov.tn/wp-includes/js/wp-emoji.js?ver=5.2.21" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="accordion-responsive-css-css" href="http://education.gov.tn/wp-content/plugins/accordions-wp/css/responsive-accordion.css?ver=5.2.21" type="text/css" media="all">
+<link rel="stylesheet" id="accordion-main-css-css" href="http://education.gov.tn/wp-content/plugins/accordions-wp/css/style.css?ver=5.2.21" type="text/css" media="all">
+<link rel="stylesheet" id="wp-color-picker-rtl-css" href="https://education.gov.tn/wp-admin/css/color-picker-rtl.css?ver=5.2.21" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-rtl-css" href="https://education.gov.tn/wp-includes/css/dist/block-library/style-rtl.css?ver=5.2.21" type="text/css" media="all">
+<link rel="stylesheet" id="easingslider-css" href="https://education.gov.tn/wp-content/plugins/easing-slider/assets/css/public.css?ver=3.0.8" type="text/css" media="all">
+<link rel="stylesheet" id="dashicons-css" href="https://education.gov.tn/wp-includes/css/dashicons.css?ver=5.2.21" type="text/css" media="all">
+<link rel="stylesheet" id="my-calendar-reset-css" href="https://education.gov.tn/wp-content/plugins/my-calendar/css/reset.css?ver=5.2.21" type="text/css" media="all">
+<link rel="stylesheet" id="my-calendar-style-css" href="https://education.gov.tn/wp-content/plugins/my-calendar/styles/twentytwenty.css?ver=5.2.21" type="text/css" media="all">
+<link rel="stylesheet" id="default_gwf-css" href="./الموقع الرسمي لوزارة التربية_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="parent-style-css" href="https://education.gov.tn/wp-content/themes/mesocolumn/style.css?ver=1.6.5.1" type="text/css" media="all">
+<link rel="stylesheet" id="style-responsive-css" href="https://education.gov.tn/wp-content/themes/mesocolumn/responsive.css?ver=1.6.5.1" type="text/css" media="all">
+<link rel="stylesheet" id="style-rtl-css" href="https://education.gov.tn/wp-content/themes/mesocolumn/rtl.css?ver=1.6.5.1" type="text/css" media="all">
+<link rel="stylesheet" id="superfish-css" href="https://education.gov.tn/wp-content/themes/mesocolumn/lib/scripts/superfish-menu/css/superfish.css?ver=1.6.5.1" type="text/css" media="all">
+<link rel="stylesheet" id="tabber-css" href="https://education.gov.tn/wp-content/themes/mesocolumn/lib/scripts/tabber/tabber.css?ver=1.6.5.1" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-cdn-css" href="https://education.gov.tn/wp-content/themes/mesocolumn/lib/scripts/font-awesome/css/font-awesome.css?ver=1.6.5.1" type="text/css" media="all">
+<script type="text/javascript" src="https://education.gov.tn/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp"></script>
+<script type="text/javascript" src="https://education.gov.tn/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1"></script>
+<script type="text/javascript" src="https://education.gov.tn/wp-content/plugins/accordions-wp/js/responsive-accordion.min.js?ver=1.0"></script>
+<script type="text/javascript" src="https://education.gov.tn/wp-content/plugins/easing-slider/assets/js/public.js?ver=3.0.8"></script>
+<link rel="https://api.w.org/" href="https://education.gov.tn/index.php?rest_route=/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://education.gov.tn/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://education.gov.tn/wp-includes/wlwmanifest.xml"> 
+<link rel="stylesheet" href="https://education.gov.tn/wp-content/themes/mesocolumn/rtl.css" type="text/css" media="screen"><meta name="generator" content="WordPress 5.2.21">
+
+<style type="text/css">
+<!--
+/* Styles by My Calendar - Joseph C Dolson https://www.joedolson.com/ */
+
+.mc-main .mc_general .event-title, .mc-main .mc_general .event-title a { background: #ffffcc; color: #000000; }
+.mc-main .mc_general .event-title a:hover, .mc-main .mc_general .event-title a:focus { background: #ffffff;}
+.mc-main {--primary-dark: #313233; --primary-light: #fff; --secondary-light: #fff; --secondary-dark: #000; --highlight-dark: #666; --highlight-light: #efefef; --category-mc_general: #ffffcc; }
+-->
+</style><style type="text/css">
+.qtranxs_flag_fr {background-image: url(http://www.education.gov.tn/wp-content/plugins/qtranslate-x/flags/fr.png); background-repeat: no-repeat;}
+.qtranxs_flag_en {background-image: url(http://www.education.gov.tn/wp-content/plugins/qtranslate-x/flags/gb.png); background-repeat: no-repeat;}
+.qtranxs_flag_ar {background-image: url(http://www.education.gov.tn/wp-content/plugins/qtranslate-x/flags/arle.png); background-repeat: no-repeat;}
+</style>
+<link hreflang="ar" href="https://education.gov.tn/?lang=ar" rel="alternate">
+<link hreflang="fr" href="https://education.gov.tn/?lang=fr" rel="alternate">
+<link hreflang="en" href="https://education.gov.tn/?lang=en" rel="alternate">
+<link hreflang="x-default" href="https://education.gov.tn/" rel="alternate">
+<meta name="generator" content="qTranslate-XT 3.6.0">
+<style type="text/css" media="all">
+</style>
+<style type="text/css" media="all">
+</style>
+<meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress.">
+<style type="text/css">.broken_link, a.broken_link {
+	text-decoration: line-through;
+}</style><style type="text/css" media="all">
+body {font-family: 'Open Sans', sans-serif;font-weight: 400;}
+#siteinfo div,h1,h2,h3,h4,h5,h6,.header-title,#main-navigation, #featured #featured-title, #cf .tinput, #wp-calendar caption,.flex-caption h1,#portfolio-filter li,.nivo-caption a.read-more,.form-submit #submit,.fbottom,ol.commentlist li div.comment-post-meta, .home-post span.post-category a,ul.tabbernav li a {font-family: 'Open Sans', sans-serif;font-weight:600;}
+#main-navigation, .sf-menu li a {font-family: 'Open Sans', sans-serif;font-weight: 600;}
+img.home-feat-rss {display:none;}#custom #siteinfo a {color: # !important;text-decoration: none;}
+#custom #siteinfo p#site-description {color: # !important;text-decoration: none;}
+#post-entry div.post-thumb.size-thumbnail {float:left;width:150px;}
+#post-entry article .post-right {margin:0 0 0 170px;}
+#post-entry aside.home-feat-cat .fpost {padding:0;}
+#post-entry aside.home-feat-cat .fpost .feat-right {margin: 0em 0em 0em 140px;}
+#post-entry aside.home-feat-cat .fpost .feat-thumb {width: 125px;}
+#post-entry aside.home-feat-cat .fpost .entry-content {font-size:1.1em;line-height: 1.5em !important;}
+#post-entry aside.home-feat-cat .fpost .feat-title {font-size:1.35em;margin:0;}
+#post-entry aside.home-feat-cat .fpost .feat_comment {display:none;}
+#top-navigation {
+      background-color: #fb9517;
+   }
+aside.home-feat-cat .feat-thumb img {
+       width: 80%;
+    }
+aside.home-feat-cat h4 a {
+    color: #fb9517;
+   
+}
+aside.home-feat-cat a {
+    color: #4f5252;
+}
+#siteinfo {
+    margin: 0;
+     float: none; 
+    padding: 1.4em 0 0;
+    overflow: hidden;
+    display: inline-block;
+}
+#header .header-inner {
+    float: left;
+    width: 100%;
+    padding: 0;
+    TEXT-ALIGN: center;
+}
+.easingslider {
+ TEXT-ALIGN: center;
+    display: inline-block !important;
+}</style>
+<noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>
+</head>
+
+<body class="rtl home blog chrome wpb-js-composer js-comp-ver-6.6.0 vc_responsive" id="custom">
+
+<div class="product-with-desc secbody">
+
+<div id="wrapper">
+
+<div id="wrapper-main">
+
+<div id="bodywrap" class="innerwrap">
+
+<div id="bodycontent">
+
+<div id="container">
+
+<nav class="top-nav iegradient effect-1" id="top-navigation">
+<div class="innerwrap">
+<ul id="menu-principal" class="sf-menu sf-js-enabled sf-arrows" style="touch-action: pan-y;"><li id="menu-item-1256" class="menu-item menu-item-type-post_type menu-item-object-page no_desc   "><a href="http://www.education.gov.tn/">الاستقبال</a></li>
+<li id="menu-item-324" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children no_desc"><a href="https://education.gov.tn/?page_id=321" class="sf-with-ul">أخلاقيات العون العمومي</a>
+<ul class="sub-menu" style="float: none; width: 18em; display: none;">
+<li id="menu-item-320" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.reference.education.gov.tn/2016-02-19/decret_4030.pdf" style="float: none; width: auto;">الأمر عدد 2014-4030</a></li>
+<li id="menu-item-327" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.reference.education.gov.tn/2016-02-19/code_ethique.pdf" style="float: none; width: auto;">مدونة سلوك وأخلاقيات العون العمومي</a></li>
+</ul>
+</li>
+<li id="menu-item-10790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children no_desc"><a href="https://education.gov.tn/?page_id=10766" class="sf-with-ul">معلومات حول القطاع</a>
+<ul class="sub-menu" style="float: none; width: 18em; display: none;">
+<li id="menu-item-12985" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a href="https://education.gov.tn/?p=12983" style="float: none; width: auto;">السياسات والبرامج</a></li>
+<li id="menu-item-10781" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.reference.education.gov.tn/2016-11-30/decret_loi_education.pdf" style="float: none; width: auto;">النصوص القانونية المنظمة للقطاع</a></li>
+<li id="menu-item-9474" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-has-children no_desc" style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.administration.education.gov.tn/2019-08-28/PrestationsAr.pdf?fbclid=IwAR2ZbgI7gJFkueekRlbyrLSKKVbwJ5Uv6c2lArysuANwTeVRDoVH9SKJiNw" style="float: none; width: auto;" class="sf-with-ul">الخدمات والتراخيص والشهادات</a>
+	<ul class="sub-menu" style="left: 100%; float: none; width: 18em; display: none;">
+<li id="menu-item-13020" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.administration.education.gov.tn/2019-08-28/PrestationsAr.pdf" style="float: none; width: auto;">قرار يتعلق بخدمات إدارية مسداة من طرف المصالح التابعة لوزارة التربية وشروط إسنادها</a></li>
+<li id="menu-item-10780" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.reference.education.gov.tn/2014-08-04/visa_edu.pdf" style="float: none; width: auto;">الحصول على تأشيرة نشر وسيلة تعليمية موازية</a></li>
+	</ul>
+</li>
+<li id="menu-item-12968" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a href="https://education.gov.tn/?p=675" style="float: none; width: auto;">التنظيم الهيكلي والمهام</a></li>
+<li id="menu-item-10774" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children no_desc" style="white-space: normal; float: right; width: 100%;"><a href="https://education.gov.tn/?page_id=10771" style="float: none; width: auto;" class="sf-with-ul">الميزانية</a>
+	<ul class="sub-menu" style="left: 100%; float: none; width: 18em; display: none;">
+<li id="menu-item-14053" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.edunet.tn/budget2021/budget_2021.pdf" style="float: none; width: auto;">ميزانية 2021 نشر 16/04/2021</a></li>
+<li id="menu-item-10775" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.education.gov.tn/budget2020/budget_2020.pdf" style="float: none; width: auto;">ميزانية 2020</a></li>
+<li id="menu-item-10776" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.education.gov.tn/budget2019/budget_2019.pdf" style="float: none; width: auto;">ميزانية 2019</a></li>
+<li id="menu-item-10777" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.education.gov.tn/budget2018/budget_2018.pdf" style="float: none; width: auto;">ميزانية 2018</a></li>
+	</ul>
+</li>
+<li id="menu-item-12990" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a href="https://education.gov.tn/?p=12988" style="float: none; width: auto;">البرامج والمشاريع والانجازات</a></li>
+<li id="menu-item-12996" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a href="https://education.gov.tn/?p=12994" style="float: none; width: auto;">التقييمات</a></li>
+<li id="menu-item-12999" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a href="https://education.gov.tn/?p=12997" style="float: none; width: auto;">تقارير التفقد الاداري والمالي</a></li>
+<li id="menu-item-13002" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a href="https://education.gov.tn/?p=13000" style="float: none; width: auto;">الصفقات العمومية</a></li>
+<li id="menu-item-13005" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a href="https://education.gov.tn/?p=13003" style="float: none; width: auto;">تقارير هيئات الرقابة</a></li>
+<li id="menu-item-13008" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-has-children no_desc" style="white-space: normal; float: right; width: 100%;"><a href="https://education.gov.tn/?p=13006" style="float: none; width: auto;" class="sf-with-ul">الاتفاقيات</a>
+	<ul class="sub-menu" style="left: 100%; float: none; width: 18em; display: none;">
+<li id="menu-item-13198" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://echos.education.gov.tn/2021-01-08/convention_prets" style="float: none; width: auto;">اتفاقيات القروض</a></li>
+	</ul>
+</li>
+<li id="menu-item-13011" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a href="https://education.gov.tn/?p=13009" style="float: none; width: auto;">المالية العمومية وتوزيع النفقات</a></li>
+<li id="menu-item-14384" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a href="https://education.gov.tn/?p=14378" style="float: none; width: auto;">الخدمات الاجتماعية : الودادية</a></li>
+<li id="menu-item-13997" class="menu-item menu-item-type-post_type menu-item-object-page no_desc   " style="white-space: normal; float: right; width: 100%;"><a href="https://education.gov.tn/?page_id=13976" style="float: none; width: auto;">المندوبيات الجهوية للتربية</a></li>
+<li id="menu-item-14003" class="menu-item menu-item-type-post_type menu-item-object-page no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.edunet.tn/liste_associations.pdf" style="float: none; width: auto;">قائمة الجمعيات في علاقة بوزارة التّربية</a></li>
+<li id="menu-item-14309" class="menu-item menu-item-type-post_type menu-item-object-page no_desc   " style="white-space: normal; float: right; width: 100%;"><a href="https://education.gov.tn/?page_id=14297" style="float: none; width: auto;">المؤسسات العمومية تحت الاشراف</a></li>
+</ul>
+</li>
+<li id="menu-item-1599" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children no_desc"><a href="https://education.gov.tn/?page_id=2" class="sf-with-ul">الدراسات والتخطيط والإحصاء التربوي</a>
+<ul class="sub-menu" style="float: none; width: 18em; display: none;">
+<li id="menu-item-1607" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a href="https://education.gov.tn/?p=688" style="float: none; width: auto;">الإحصاء التربوي</a></li>
+<li id="menu-item-1603" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a href="https://education.gov.tn/?p=1592" style="float: none; width: auto;">مؤشرات الوضع التربوي في الجهات</a></li>
+</ul>
+</li>
+<li id="menu-item-54" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children no_desc"><a href="https://education.gov.tn/?page_id=12" class="sf-with-ul">النفاذ إلى المعلومة</a>
+<ul class="sub-menu" style="float: none; width: 18em; display: none;">
+<li id="menu-item-12868" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children no_desc" style="white-space: normal; float: right; width: 100%;"><a href="https://education.gov.tn/?page_id=12866" style="float: none; width: auto;" class="sf-with-ul">التقارير السنوية</a>
+	<ul class="sub-menu" style="left: 100%; float: none; width: 18em; display: none;">
+<li id="menu-item-22252" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.echos.education.gov.tn/2024-12-19/Rapport_Acces_Information2023.pdf" style="float: none; width: auto;">التّقرير السّنوي لوزارة التّربية حول  النّفاذ إلى المعلومة خلال السّنة الإدارية 2023</a></li>
+<li id="menu-item-18548" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.echos.education.gov.tn/2023-04-29/Rapport_Acces_Information2022.pdf" style="float: none; width: auto;">التقرير السنوي حول النفاذ الى المعلومة  بوزارة التربية لسنة 2022</a></li>
+<li id="menu-item-16347" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.echos.education.gov.tn/2022-03-16/Rapport_Acces_Information2021.pdf" style="float: none; width: auto;">التّقرير السّنوي لوزارة التّربية حول  النّفاذ إلى المعلومة خلال السّنة الإدارية 2021</a></li>
+<li id="menu-item-13273" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.echos.education.gov.tn/2021-01-26/Rapport_Acces_Information2020.pdf" style="float: none; width: auto;">التّقرير السّنوي لوزارة التّربية حول  النّفاذ إلى المعلومة خلال السّنة الإدارية 2020</a></li>
+<li id="menu-item-10928" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.edunet.tn/acces_document/rapport_annuel.pdf" style="float: none; width: auto;">التقرير السنوي لوزارة التربية حول  النفاذ الى المعلومة خلال السنة الإدارية 2019</a></li>
+<li id="menu-item-12863" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.echos.education.gov.tn/2020-12-07/RapportAnnuel2018.pdf" style="float: none; width: auto;">التقرير السنوي حول النفاذ الى المعلومة  بوزارة التربية لسنة 2018</a></li>
+	</ul>
+</li>
+<li id="menu-item-9775" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a href="https://education.gov.tn/?p=9769" style="float: none; width: auto;">المسؤولون على النفاذ</a></li>
+<li id="menu-item-458" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a href="https://education.gov.tn/?p=453" style="float: none; width: auto;">سياسة الوزارة في مجال الإعلام و النّفاذ إلى المعلومة</a></li>
+<li id="menu-item-476" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.edunet.tn/acces_document/guide_acces.pdf" style="float: none; width: auto;">دليل إجراءات النّفاذ</a></li>
+<li id="menu-item-475" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.edunet.tn/acces_document/demande_acces.pdf" style="float: none; width: auto;">مطلب نفاذ</a></li>
+<li id="menu-item-474" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.edunet.tn/acces_document/demande_plainte.pdf" style="float: none; width: auto;">مطلب تظلّم</a></li>
+<li id="menu-item-473" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a href="https://education.gov.tn/?p=465" style="float: none; width: auto;">المراجع القانونيّة</a></li>
+<li id="menu-item-472" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a href="https://education.gov.tn/?p=467" style="float: none; width: auto;">الأدلّة المرجعيّة</a></li>
+<li id="menu-item-471" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.reference.education.gov.tn/2014-08-04/visa_edu.pdf" style="float: none; width: auto;">الحصول على تأشيرة نشر وسيلة تعليمية موازية</a></li>
+</ul>
+</li>
+<li id="menu-item-22438" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children no_desc"><a href="https://education.gov.tn/?page_id=22435" class="sf-with-ul">مكتب العلاقات مع المواطن</a>
+<ul class="sub-menu" style="float: none; width: 18em; display: none;">
+<li id="menu-item-22458" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children no_desc" style="white-space: normal; float: right; width: 100%;"><a href="https://education.gov.tn/?page_id=22433" style="float: none; width: auto;" class="sf-with-ul">الأوامر والمناشير</a>
+	<ul class="sub-menu" style="left: 100%; float: none; width: 18em; display: none;">
+<li id="menu-item-22441" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.edunet.tn/tarbia/Bureau_relation_citoyen/arrete1152_1998.pdf" style="float: none; width: auto;">الأمر عدد 1152 لسنة 1998</a></li>
+<li id="menu-item-22446" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.edunet.tn/tarbia/Bureau_relation_citoyen/arrete1549_1993.pdf" style="float: none; width: auto;">الأمر عدد 1549 لسنة 1993</a></li>
+<li id="menu-item-22450" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.edunet.tn/tarbia/Bureau_relation_citoyen/circulaire21_1998.pdf" style="float: none; width: auto;">منشور عدد 21 لسنة 1998</a></li>
+<li id="menu-item-22456" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.edunet.tn/tarbia/Bureau_relation_citoyen/circulaire51_1994.pdf" style="float: none; width: auto;">منشور عدد 51 لسنة 1994</a></li>
+<li id="menu-item-22453" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.edunet.tn/tarbia/Bureau_relation_citoyen/circulaire60_1993.pdf" style="float: none; width: auto;">منشور عدد 60 لسنة 1993</a></li>
+	</ul>
+</li>
+<li id="menu-item-22461" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.edunet.tn/tarbia/Bureau_relation_citoyen/contact_Bureau_RC.pdf" style="float: none; width: auto;">الاتصال بمكتب العلاقات مع المواطن</a></li>
+<li id="menu-item-22466" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.edunet.tn/tarbia/Bureau_relation_citoyen/formations_forums.pdf" style="float: none; width: auto;">الدورات التكوينية و الملتقيات</a></li>
+</ul>
+</li>
+<li id="menu-item-1196" class="menu-item menu-item-type-post_type menu-item-object-page no_desc   "><a href="https://education.gov.tn/?page_id=1191">اتصل بنا</a></li>
+<li id="menu-item-299" class="qtranxs-lang-menu qtranxs-lang-menu-ar menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children no_desc"><a title="العربية" href="https://education.gov.tn/#" class="sf-with-ul">اللغة:&nbsp;<img src="https://education.gov.tn/wp-content/plugins/qtranslate-xt-master/flags/tn.png" alt="العربية"></a>
+<ul class="sub-menu" style="float: none; width: 18em; display: none;">
+<li id="menu-item-22467" class="qtranxs-lang-menu-item qtranxs-lang-menu-item-ar menu-item menu-item-type-custom menu-item-object-custom no_desc   " style="white-space: normal; float: right; width: 100%;"><a title="العربية" href="https://education.gov.tn/?lang=ar" style="float: none; width: auto;"><img src="https://education.gov.tn/wp-content/plugins/qtranslate-xt-master/flags/tn.png" alt="العربية">&nbsp;العربية</a></li>
+<li id="menu-item-22468" class="qtranxs-lang-menu-item qtranxs-lang-menu-item-fr menu-item menu-item-type-custom menu-item-object-custom no_desc   " style="white-space: normal; float: right; width: 100%;"><a title="Français" href="https://education.gov.tn/?lang=fr" style="float: none; width: auto;"><img src="https://education.gov.tn/wp-content/plugins/qtranslate-xt-master/flags/fr.png" alt="Français">&nbsp;Français</a></li>
+<li id="menu-item-22469" class="qtranxs-lang-menu-item qtranxs-lang-menu-item-en menu-item menu-item-type-custom menu-item-object-custom no_desc   " style="white-space: normal; float: right; width: 100%;"><a title="English" href="https://education.gov.tn/?lang=en" style="float: none; width: auto;"><img src="https://education.gov.tn/wp-content/plugins/qtranslate-xt-master/flags/gb.png" alt="English">&nbsp;English</a></li>
+</ul>
+</li>
+</ul></div>
+</nav>
+<!-- HEADER START -->
+<header class="iegradient yes_head" id="header">
+<div class="header-inner">
+<div class="innerwrap">
+<div id="siteinfo">
+<a href="https://education.gov.tn/" title="الموقع الرسمي لوزارة التربية"><img src="http://www.education.gov.tn/wp-content/uploads/2017/12/entete2-1.jpg" alt="الموقع الرسمي لوزارة التربية"></a>
+<span class="header-seo-span">
+<h1><a href="https://education.gov.tn/" title="الموقع الرسمي لوزارة التربية" rel="home">الموقع الرسمي لوزارة التربية</a></h1><p id="site-description"></p>
+</span>
+</div>
+<!-- SITEINFO END -->
+</div>
+</div>
+</header>
+<!-- HEADER END -->
+<div class="container-wrap">
+<style type="text/css">.easingslider-1242 { width: 100%; }.easingslider-1242 .easingslider-image { max-height: 360px; max-width: 960px; }.easingslider-1242 .easingslider-fade-in, .easingslider-fade-out { -webkit-animation-duration: 400ms; -moz-animation-duration: 400ms; animation-duration: 400ms; }</style><script type="text/javascript">window.EasingSlider1242 = {"width":960,"height":360,"singleItem":true,"items":1,"itemsDesktop":false,"itemsDesktopSmall":false,"itemsTablet":false,"itemsTabletSmall":false,"itemsMobile":false,"responsive":true,"lazyLoad":false,"autoPlay":3000,"slideSpeed":400,"navigation":true,"navigationText":["",""],"pagination":true,"autoHeight":false,"mouseDrag":false,"touchDrag":false,"addClassActive":true,"transitionStyle":false};</script><div data-id="1242" class="easingslider easingslider-1242 easingslider-container easingslider-full-width easingslider-resizing-enabled easingslider-aspect-ratio easingslider-arrows-inside easingslider-pagination-inside easingslider-pagination-bottom-right easingslider-theme" style="opacity: 1; display: block; height: 360px;"><div class="easingslider-wrapper-outer" style="width: 1120px;"><div class="easingslider-wrapper" style="width: 24640px; left: 0px; display: block; height: 360px; transition: 800ms; transform: translate3d(-11200px, 0px, 0px);"><div class="easingslider-item" style="width: 1120px; height: 360px;"><div class="easingslider-slide"><a href="http://www.echos.education.gov.tn/2024-11-04/Barometre_EDV1.pdf" target="1"><img src="https://education.gov.tn/wp-content/uploads/2024/11/barometre_banniere_inscri2-copy-1-960x360.png" alt="" title="" class="easingslider-image" style="max-height: 360px;"></a></div></div><div class="easingslider-item" style="width: 1120px; height: 360px;"><div class="easingslider-slide"><a href="http://www.echos.education.gov.tn/2024-11-04/Barometre_EDV2.pdf" target="1"><img src="https://education.gov.tn/wp-content/uploads/2024/11/barometre_banniere_quitte-960x360.png" alt="" title="" class="easingslider-image" style="max-height: 360px;"></a></div></div><div class="easingslider-item" style="width: 1120px; height: 360px;"><div class="easingslider-slide"><a href="https://bac.education.tn/" target="1"><img src="https://education.gov.tn/wp-content/uploads/2024/10/inscri_bac2025-960x360.png" alt="" title="" class="easingslider-image" style="max-height: 360px;"></a></div></div><div class="easingslider-item" style="width: 1120px; height: 360px;"><div class="easingslider-slide"><a href="https://six.education.tn/" target="1"><img src="https://education.gov.tn/wp-content/uploads/2024/10/inscription_6eme2025-960x360.png" alt="" title="" class="easingslider-image" style="max-height: 360px;"></a></div></div><div class="easingslider-item" style="width: 1120px; height: 360px;"><div class="easingslider-slide"><a href="https://neuf.education.tn/" target="1"><img src="https://education.gov.tn/wp-content/uploads/2024/10/inscription_9eme2025-960x360.png" alt="" title="" class="easingslider-image" style="max-height: 360px;"></a></div></div><div class="easingslider-item" style="width: 1120px; height: 360px;"><div class="easingslider-slide"><a href="http://www.echos.education.gov.tn/2023-03-13/Presentation_EDUNET10.pdf" target="1"><img src="https://education.gov.tn/wp-content/uploads/2023/03/edunet10-960x360.png" alt="" title="" class="easingslider-image" style="max-height: 360px;"></a></div></div><div class="easingslider-item" style="width: 1120px; height: 360px;"><div class="easingslider-slide"><a href="https://primaire.education.tn/" target="1"><img src="https://education.gov.tn/wp-content/uploads/2024/05/inscri_1ere_2024_2025-960x360.png" alt="" title="" class="easingslider-image" style="max-height: 360px;"></a></div></div><div class="easingslider-item" style="width: 1120px; height: 360px;"><div class="easingslider-slide"><a href="http://concours.revision.cnte.tn/" target="1"><img src="https://education.gov.tn/wp-content/uploads/2024/05/fond_revsion2024_2-960x360.png" alt="" title="" class="easingslider-image" style="max-height: 360px;"></a></div></div><div class="easingslider-item" style="width: 1120px; height: 360px;"><div class="easingslider-slide"><a href="https://sondage.education.tn/index.php/978831?lang=ar" target="1"><img src="https://education.gov.tn/wp-content/uploads/2022/06/fond_sondage3-960x360.png" alt="" title="" class="easingslider-image" style="max-height: 360px;"></a></div></div><div class="easingslider-item" style="width: 1120px; height: 360px;"><div class="easingslider-slide"><a href="https://scolarite.education.tn/" target="1"><img src="https://education.gov.tn/wp-content/uploads/2021/08/fond_scolarite2021-copy-960x360.png" alt="" title="" class="easingslider-image" style="max-height: 360px;"></a></div></div><div class="easingslider-item active" style="width: 1120px; height: 360px;"><div class="easingslider-slide"><a href="https://khadamet.education.tn/auth/login" target="1"><img src="https://education.gov.tn/wp-content/uploads/2021/06/khadamet-960x360.png" alt="" title="" class="easingslider-image" style="max-height: 360px;"></a></div></div></div></div><div class="easingslider-controls clickable"><div class="easingslider-pagination"><div class="easingslider-page"><span class=""></span></div><div class="easingslider-page"><span class=""></span></div><div class="easingslider-page"><span class=""></span></div><div class="easingslider-page"><span class=""></span></div><div class="easingslider-page"><span class=""></span></div><div class="easingslider-page"><span class=""></span></div><div class="easingslider-page"><span class=""></span></div><div class="easingslider-page"><span class=""></span></div><div class="easingslider-page"><span class=""></span></div><div class="easingslider-page"><span class=""></span></div><div class="easingslider-page active"><span class=""></span></div></div><div class="easingslider-buttons"><div class="easingslider-prev"></div><div class="easingslider-next"></div></div></div></div>
+<!-- NAVIGATION START -->
+<nav class="main-nav iegradient" id="main-navigation">
+<ul id="menu-menu-intermediaire" class="sf-menu sf-js-enabled sf-arrows" style="touch-action: pan-y;"><li id="menu-item-135" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children no_desc"><a href="https://education.gov.tn/?page_id=124" class="sf-with-ul">الوزارة</a>
+<ul class="sub-menu" style="float: none; width: 18em; display: none;">
+<li id="menu-item-12967" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a href="https://education.gov.tn/?p=675" style="float: none; width: auto;">التنظيم الهيكلي والمهام</a></li>
+<li id="menu-item-2607" class="menu-item menu-item-type-taxonomy menu-item-object-category no_desc   " style="white-space: normal; float: right; width: 100%;"><a href="https://education.gov.tn/?cat=36" style="float: none; width: auto;">نشاط الوزير</a></li>
+<li id="menu-item-14078" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.edunet.tn/budget2021/budget_2021.pdf" style="float: none; width: auto;">ميزانية 2021 نشر 16/04/2021</a></li>
+<li id="menu-item-10760" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.education.gov.tn/budget2020/budget_2020.pdf" style="float: none; width: auto;">ميزانية 2020</a></li>
+<li id="menu-item-2972" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.education.gov.tn/budget2019/budget_2019.pdf" style="float: none; width: auto;">ميزانية 2019</a></li>
+<li id="menu-item-2973" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.education.gov.tn/budget2018/pap_2018.pdf" style="float: none; width: auto;">المشروع السنوي للقدرة على الاداء لسنة 2019</a></li>
+</ul>
+</li>
+<li id="menu-item-12723" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children no_desc"><a href="https://education.gov.tn/?page_id=436" class="sf-with-ul">مواعيد الإمتحانات الوطنية</a>
+<ul class="sub-menu" style="float: none; width: 18em; display: none;">
+<li id="menu-item-22308" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.echos.education.gov.tn/2025-01-02/6_2025.pdf" style="float: none; width: auto;">مناظرة الدخول إلى المدارس الإعدادية النموذجية – روزنامة الاختبارات الكتابية (دورة 2025)</a></li>
+<li id="menu-item-22309" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.echos.education.gov.tn/2025-01-02/9_2025.pdf" style="float: none; width: auto;">امتحان شهادة ختم التعليم الأساسي  – روزنامة الاختبارات الكتابية (دورة 2025)</a></li>
+<li id="menu-item-22310" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.echos.education.gov.tn/2025-01-02/Bac_2025.pdf" style="float: none; width: auto;">امتحان البكالوريا  – روزنامة الاختبارات الكتابية لدورة 2025</a></li>
+<li id="menu-item-21858" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.administration.education.gov.tn/2024-10-07/101082024.pdf" style="float: none; width: auto;">روزنامة الامتحانات الوطنية بالنسبة إلى السنة الدراسية 2024-2025</a></li>
+<li id="menu-item-21937" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.echos.education.gov.tn/2024-10-14/Com14102024B.pdf" style="float: none; width: auto;">بلاغ –  تسجيل تلاميذ السنة الرابعة ثانوي المرسمين بالمعاهد العمومية والخاصة وكذلك المترشحين بصفة فردية لاجتياز امتحان البكالوريا (دورة 2025)</a></li>
+<li id="menu-item-21938" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.echos.education.gov.tn/2024-10-14/Com14102024C.pdf" style="float: none; width: auto;">بلاغ –  تسجيل المترشحين لاجتياز امتحاني شهادتي ختم التعليم الأساسي العام والتقني (دورة 2025)</a></li>
+<li id="menu-item-21939" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.echos.education.gov.tn/2024-10-14/Com14102024P.pdf" style="float: none; width: auto;">بلاغ – تسجيل المترشحين لاجتياز مناظرة الدخول إلى المدارس الإعدادية النموذجية (دورة 2025)</a></li>
+</ul>
+</li>
+<li id="menu-item-17354" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children no_desc"><a href="https://education.gov.tn/?page_id=126" class="sf-with-ul">السنة الدراسية 2024/2025</a>
+<ul class="sub-menu" style="float: none; width: 18em; display: none;">
+<li id="menu-item-22305" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.echos.education.gov.tn/2025-01-02/6_2025.pdf" style="float: none; width: auto;">مناظرة الدخول إلى المدارس الإعدادية النموذجية – روزنامة الاختبارات الكتابية (دورة 2025)</a></li>
+<li id="menu-item-22306" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.echos.education.gov.tn/2025-01-02/9_2025.pdf" style="float: none; width: auto;">امتحان شهادة ختم التعليم الأساسي  – روزنامة الاختبارات الكتابية (دورة 2025)</a></li>
+<li id="menu-item-22307" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.echos.education.gov.tn/2025-01-02/Bac_2025.pdf" style="float: none; width: auto;">امتحان البكالوريا  – روزنامة الاختبارات الكتابية لدورة 2025</a></li>
+<li id="menu-item-21857" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.administration.education.gov.tn/2024-10-07/101082024.pdf" style="float: none; width: auto;">روزنامة الامتحانات الوطنية بالنسبة إلى السنة الدراسية 2024-2025</a></li>
+<li id="menu-item-22253" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.administration.education.gov.tn/2024-12-18/151062024.pdf" style="float: none; width: auto;">روزنامة المراقبة المستمرة بالمدارس الإعدادية والمعاهد للثلاثي الثالث من السنة الدراسية 2024-2025</a></li>
+<li id="menu-item-22036" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.administration.education.gov.tn/2024-10-24/128052024.pdf" style="float: none; width: auto;">روزنامة الاختبارات التقييمية الثلاثية بالمرحلة الابتدائية والتراتيب التنظيمية المتعلقة بها بالنسبة إلى السنة الدراسية  2024-2025</a></li>
+<li id="menu-item-21770" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.administration.education.gov.tn/2024-09-09/71062024.pdf" style="float: none; width: auto;">روزنامة المراقبة المستمرة بالمدارس الإعدادية والمعاهد العمومية والخاصة بالنسبة إلى بالنسبة إلى الثلاثيين الأول والثاني من السنة الدراسية 2024-2025</a></li>
+<li id="menu-item-21771" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.administration.education.gov.tn/2024-08-22/63062024.pdf" style="float: none; width: auto;">افتتاح السنة الدراسية 2024-2025 واختتامها وروزنامة العطل المدرسيّة الخاصّة بها</a></li>
+<li id="menu-item-12639" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.echos.education.gov.tn/2020-11-02/ProgSecAlleg.pdf" style="float: none; width: auto;">البرامج المخفّفة بالمرحلة الإعدادية والتّعليم الثّانوي</a></li>
+</ul>
+</li>
+<li id="menu-item-132" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children no_desc"><a href="https://education.gov.tn/?page_id=130" class="sf-with-ul">الوثائق</a>
+<ul class="sub-menu" style="float: none; width: 18em; display: none;">
+<li id="menu-item-673" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a href="https://education.gov.tn/?p=667" style="float: none; width: auto;">وثائق مرجعية</a></li>
+<li id="menu-item-496" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a href="https://education.gov.tn/?p=493" style="float: none; width: auto;">كراس الشروط</a></li>
+<li id="menu-item-505" class="menu-item menu-item-type-post_type menu-item-object-post no_desc   " style="white-space: normal; float: right; width: 100%;"><a href="https://education.gov.tn/?p=500" style="float: none; width: auto;">البرامج الرسمية</a></li>
+<li id="menu-item-584" class="menu-item menu-item-type-post_type menu-item-object-page no_desc   " style="white-space: normal; float: right; width: 100%;"><a target="_blank" href="http://www.education.gov.tn/?cat=23" style="float: none; width: auto;">مناشير</a></li>
+</ul>
+</li>
+<li id="menu-item-1654" class="menu-item menu-item-type-post_type menu-item-object-post no_desc"><a href="https://education.gov.tn/?p=1592">مؤشرات الوضع التربوي في الجهات</a></li>
+</ul></nav>
+<!-- NAVIGATION END -->
+
+
+<!-- CONTENT START -->
+<div class="content">
+<div class="content-inner">
+
+
+<!-- POST ENTRY START -->
+<div id="post-entry">
+
+<div class="post-entry-inner">
+
+
+
+<aside class="home-feat-cat post_tn_cat_color_18 odd">
+<h4 class="homefeattitle feat_tn_cat_color_18"><a href="https://education.gov.tn/?cat=18">المناظرات المهنية</a>&nbsp;&nbsp;<a title="Get Feed for المناظرات المهنية" href="https://education.gov.tn/?cat=18/feed/"><img class="home-feat-rss" src="https://education.gov.tn/wp-content/themes/mesocolumn/images/rss2.png" alt="Get Feed for المناظرات المهنية"></a></h4>
+<div class="homefeat">
+<article class="hentry hnews feat-post fpost feat-22500 fp0">
+
+<div class="feat-thumb"><a href="http://concours.edunet.tn/promotion/2025/resultat_ing_2023/resultat/resultat.php" title="نتائج المناظرتين الداخليتن بالملفات للترقية الى رتبة مهندس عام ومهندس رئيس (دورة 2023)" target="_blank"><img width="120" height="120" class="alignleft" src="https://education.gov.tn/wp-content/uploads/2025/02/Capture-150x150.jpg" alt="Concours Interne" title="نتائج المناظرتين الداخليتن بالملفات للترقية الى رتبة مهندس عام ومهندس رئيس (دورة 2023)"></a></div>
+<div class="feat-right">
+<h2 class="entry-title feat-title"><a rel="bookmark" href="http://concours.edunet.tn/promotion/2025/resultat_ing_2023/resultat/resultat.php" title="نتائج المناظرتين الداخليتن بالملفات للترقية الى رتبة مهندس عام ومهندس رئيس (دورة 2023)" target="_blank">نتائج المناظرتين الداخليتن بالملفات للترقية الى رتبة مهندس عام ومهندس رئيس (دورة 2023)</a></h2>
+
+<div class="feat-meta"><!--span class="feat_author vcard">
+<!--?php the_author_posts_link(); ?>
+</span-->
+<span class="feat_time entry-date"><abbr class="published" title="2025-02-12T16:07:54+00:00">
+12/02/2025</abbr></span>
+<span class="date updated meta-no-display">2025-02-12T16:07:54+00:00</span></div>
+
+</div></article>
+<article class="feat-post apost fp1 post-22490 post type-post status-publish format-standard has-post-thumbnail hentry category-concours-interne category-concours-professionnel has_thumb">
+
+<div class="feat-thumb"><a href="http://concours.edunet.tn/promotion/2025/resultat_analystes_2023/" title="نتائج المناظرات الداخلية بالملفات لترقية أعوان سلك محللي و تقنيي الاعلامية (دورة 2023)" target="_blank"><img width="120" height="120" class="alignleft" src="https://education.gov.tn/wp-content/uploads/2025/02/Capture-150x150.jpg" alt="نتائج المناظرات الداخلية بالملفات لترقية أعوان سلك محللي و تقنيي الاعلامية (دورة 2023)" title="نتائج المناظرات الداخلية بالملفات لترقية أعوان سلك محللي و تقنيي الاعلامية (دورة 2023)"></a></div>
+<div class="feat-right">
+<h2 class="entry-title feat-title"><a rel="bookmark" href="http://concours.edunet.tn/promotion/2025/resultat_analystes_2023/" title="نتائج المناظرات الداخلية بالملفات لترقية أعوان سلك محللي و تقنيي الاعلامية (دورة 2023)" target="_blank">
+نتائج المناظرات الداخلية بالملفات لترقية أعوان سلك محللي و تقنيي الاعلامية (دورة 2023)</a></h2>
+
+<div class="feat-meta"><!--span class="feat_author vcard">
+<!--?php the_author_posts_link(); ?></span-->
+<span class="feat_time entry-date"><abbr class="published" title="2025-02-11T09:32:11+00:00">11/02/2025</abbr></span>
+<span class="feat_comment"><span>التعليقات <span class="screen-reader-text"> على نتائج المناظرات الداخلية بالملفات لترقية أعوان سلك محللي و تقنيي الاعلامية (دورة 2023) مغلقة</span></span></span><span class="date updated meta-no-display">2025-02-11T09:32:13+00:00</span></div>
+
+</div></article>
+<article class="feat-post apost fp2 post-22395 post type-post status-publish format-standard has-post-thumbnail hentry category-concours-interne category-concours-professionnel has_thumb">
+
+<div class="feat-thumb"><a href="http://concours.edunet.tn/promotion/2024/promouv_choix_2023/resultat_final/resultat/resultat.php" title="النتائج النهائية لترقية  العملة بالاختيار من صنف إلى صنف أعلى (دورة 2023)" target="_blank"><img width="120" height="120" class="alignleft" src="https://education.gov.tn/wp-content/uploads/2025/01/Capture-1-150x150.jpg" alt="النتائج النهائية لترقية  العملة بالاختيار من صنف إلى صنف أعلى (دورة 2023)" title="النتائج النهائية لترقية  العملة بالاختيار من صنف إلى صنف أعلى (دورة 2023)"></a></div>
+<div class="feat-right">
+<h2 class="entry-title feat-title"><a rel="bookmark" href="http://concours.edunet.tn/promotion/2024/promouv_choix_2023/resultat_final/resultat/resultat.php" title="النتائج النهائية لترقية  العملة بالاختيار من صنف إلى صنف أعلى (دورة 2023)" target="_blank">
+النتائج النهائية لترقية  العملة بالاختيار من صنف إلى صنف أعلى (دورة 2023)</a></h2>
+
+<div class="feat-meta"><!--span class="feat_author vcard">
+<!--?php the_author_posts_link(); ?></span-->
+<span class="feat_time entry-date"><abbr class="published" title="2025-01-24T14:37:16+00:00">24/01/2025</abbr></span>
+<span class="feat_comment"><span>التعليقات <span class="screen-reader-text"> على النتائج النهائية لترقية  العملة بالاختيار من صنف إلى صنف أعلى (دورة 2023) مغلقة</span></span></span><span class="date updated meta-no-display">2025-01-24T14:41:54+00:00</span></div>
+
+</div></article>
+<article class="feat-post apost fp3 post-22385 post type-post status-publish format-standard has-post-thumbnail hentry category-concours-interne category-concours-professionnel has_thumb">
+
+<div class="feat-thumb"><a href="http://concours.edunet.tn/promotion/2024/resultat_architectes_2023/resultat/resultat.php" title="نتائج المناظرات الداخلية بالملفات للترقية بسلك المهندسين المعماريين (دورة 2023)" target="_blank"><img width="120" height="120" class="alignleft" src="https://education.gov.tn/wp-content/uploads/2025/01/Capture-150x150.jpg" alt="نتائج المناظرات الداخلية بالملفات للترقية بسلك المهندسين المعماريين (دورة 2023)" title="نتائج المناظرات الداخلية بالملفات للترقية بسلك المهندسين المعماريين (دورة 2023)"></a></div>
+<div class="feat-right">
+<h2 class="entry-title feat-title"><a rel="bookmark" href="http://concours.edunet.tn/promotion/2024/resultat_architectes_2023/resultat/resultat.php" title="نتائج المناظرات الداخلية بالملفات للترقية بسلك المهندسين المعماريين (دورة 2023)" target="_blank">
+نتائج المناظرات الداخلية بالملفات للترقية بسلك المهندسين المعماريين (دورة 2023)</a></h2>
+
+<div class="feat-meta"><!--span class="feat_author vcard">
+<!--?php the_author_posts_link(); ?></span-->
+<span class="feat_time entry-date"><abbr class="published" title="2025-01-23T00:06:12+00:00">23/01/2025</abbr></span>
+<span class="feat_comment"><span>التعليقات <span class="screen-reader-text"> على نتائج المناظرات الداخلية بالملفات للترقية بسلك المهندسين المعماريين (دورة 2023) مغلقة</span></span></span><span class="date updated meta-no-display">2025-01-23T00:06:13+00:00</span></div>
+
+</div></article>
+</div>
+</aside>
+<aside class="home-feat-cat post_tn_cat_color_24">
+<h4 class="homefeattitle feat_tn_cat_color_24"><a href="https://education.gov.tn/?cat=24">أخبارنا</a>&nbsp;&nbsp;<a title="Get Feed for أخبارنا" href="https://education.gov.tn/?cat=24/feed/"><img class="home-feat-rss" src="https://education.gov.tn/wp-content/themes/mesocolumn/images/rss2.png" alt="Get Feed for أخبارنا"></a></h4>
+<div class="homefeat">
+<article class="hentry hnews feat-post fpost feat-22545 fp0">
+
+<div class="feat-thumb"><a href="http://www.echos.education.gov.tn/2025-02-28/Actu_Min28022025.pdf" title="وزير التّربية يشرف على موكب توزيع تجهيزات ومعدّات إعلاميّة لفائدة المؤسّسات التّربويّة والهياكل الإدارية" target="_blank"><img width="120" height="120" class="alignleft" src="https://education.gov.tn/wp-content/uploads/2025/02/481234001_1026320092862675_7327773370966395412_n-150x150.jpg" alt="Echos du Ministère" title="وزير التّربية يشرف على موكب توزيع تجهيزات ومعدّات إعلاميّة لفائدة المؤسّسات التّربويّة والهياكل الإدارية"></a></div>
+<div class="feat-right">
+<h2 class="entry-title feat-title"><a rel="bookmark" href="http://www.echos.education.gov.tn/2025-02-28/Actu_Min28022025.pdf" title="وزير التّربية يشرف على موكب توزيع تجهيزات ومعدّات إعلاميّة لفائدة المؤسّسات التّربويّة والهياكل الإدارية" target="_blank">وزير التّربية يشرف على موكب توزيع تجهيزات ومعدّات إعلاميّة لفائدة المؤسّسات التّربويّة والهياكل الإدارية</a></h2>
+
+<div class="feat-meta"><!--span class="feat_author vcard">
+<!--?php the_author_posts_link(); ?>
+</span-->
+<span class="feat_time entry-date"><abbr class="published" title="2025-02-28T16:58:40+00:00">
+28/02/2025</abbr></span>
+<span class="date updated meta-no-display">2025-02-28T17:03:09+00:00</span></div>
+
+</div></article>
+<article class="feat-post apost fp1 post-22542 post type-post status-publish format-standard has-post-thumbnail hentry category-echos-du-ministere category-nos-echos category-activite_ministre has_thumb">
+
+<div class="feat-thumb"><a href="http://www.echos.education.gov.tn/2025-02-27/Actu_Min27022025.pdf" title="وزير التربية يشرف على اجتماع بالمندوبين الجهويين للتربية حول الاستعدادات لشهر رمضان لسنة 2025" target="_blank"><img width="120" height="120" class="alignleft" src="https://education.gov.tn/wp-content/uploads/2025/02/480822033_1025838059577545_8836229459433855650_n-150x150.jpg" alt="وزير التربية يشرف على اجتماع بالمندوبين الجهويين للتربية حول الاستعدادات لشهر رمضان لسنة 2025" title="وزير التربية يشرف على اجتماع بالمندوبين الجهويين للتربية حول الاستعدادات لشهر رمضان لسنة 2025"></a></div>
+<div class="feat-right">
+<h2 class="entry-title feat-title"><a rel="bookmark" href="http://www.echos.education.gov.tn/2025-02-27/Actu_Min27022025.pdf" title="وزير التربية يشرف على اجتماع بالمندوبين الجهويين للتربية حول الاستعدادات لشهر رمضان لسنة 2025" target="_blank">
+وزير التربية يشرف على اجتماع بالمندوبين الجهويين للتربية حول الاستعدادات لشهر رمضان لسنة 2025</a></h2>
+
+<div class="feat-meta"><!--span class="feat_author vcard">
+<!--?php the_author_posts_link(); ?></span-->
+<span class="feat_time entry-date"><abbr class="published" title="2025-02-28T08:53:15+00:00">28/02/2025</abbr></span>
+<span class="feat_comment"><span>التعليقات <span class="screen-reader-text"> على وزير التربية يشرف على اجتماع بالمندوبين الجهويين للتربية حول الاستعدادات لشهر رمضان لسنة 2025 مغلقة</span></span></span><span class="date updated meta-no-display">2025-02-28T08:53:16+00:00</span></div>
+
+</div></article>
+<article class="feat-post apost fp2 post-22538 post type-post status-publish format-standard has-post-thumbnail hentry category-echos-du-ministere category-nos-echos category-activite_ministre has_thumb">
+
+<div class="feat-thumb"><a href="http://www.echos.education.gov.tn/2025-02-25/Actu_Min25022025.pdf" title="افتتاح أشغال الاجتماع التشاوري الثالث للإيسيسكو" target="_blank"><img width="120" height="120" class="alignleft" src="https://education.gov.tn/wp-content/uploads/2025/02/481161467_1024334193061265_5884377081484759665_n-150x150.jpg" alt="افتتاح أشغال الاجتماع التشاوري الثالث للإيسيسكو" title="افتتاح أشغال الاجتماع التشاوري الثالث للإيسيسكو"></a></div>
+<div class="feat-right">
+<h2 class="entry-title feat-title"><a rel="bookmark" href="http://www.echos.education.gov.tn/2025-02-25/Actu_Min25022025.pdf" title="افتتاح أشغال الاجتماع التشاوري الثالث للإيسيسكو" target="_blank">
+افتتاح أشغال الاجتماع التشاوري الثالث للإيسيسكو</a></h2>
+
+<div class="feat-meta"><!--span class="feat_author vcard">
+<!--?php the_author_posts_link(); ?></span-->
+<span class="feat_time entry-date"><abbr class="published" title="2025-02-25T19:47:01+00:00">25/02/2025</abbr></span>
+<span class="feat_comment"><span>التعليقات <span class="screen-reader-text"> على افتتاح أشغال الاجتماع التشاوري الثالث للإيسيسكو مغلقة</span></span></span><span class="date updated meta-no-display">2025-02-26T10:03:43+00:00</span></div>
+
+</div></article>
+<article class="feat-post apost fp3 post-22535 post type-post status-publish format-standard has-post-thumbnail hentry category-echos-du-ministere category-nos-echos category-nos-publications category-doc_ref has_thumb">
+
+<div class="feat-thumb"><a href="http://www.reference.education.gov.tn/2025-02-25/Rapport%20Acces_Info2024.pdf" title="التّقرير السّنوي لوزارة التّربية حول  النّفاذ إلى المعلومة خلال السّنة الإدارية 2024" target="_blank"><img width="120" height="120" class="alignleft" src="https://education.gov.tn/wp-content/uploads/2025/02/PAGE-DE-GARDE-RAPPORT-ACCES-1-150x150.jpg" alt="التّقرير السّنوي لوزارة التّربية حول  النّفاذ إلى المعلومة خلال السّنة الإدارية 2024" title="التّقرير السّنوي لوزارة التّربية حول  النّفاذ إلى المعلومة خلال السّنة الإدارية 2024"></a></div>
+<div class="feat-right">
+<h2 class="entry-title feat-title"><a rel="bookmark" href="http://www.reference.education.gov.tn/2025-02-25/Rapport%20Acces_Info2024.pdf" title="التّقرير السّنوي لوزارة التّربية حول  النّفاذ إلى المعلومة خلال السّنة الإدارية 2024" target="_blank">
+التّقرير السّنوي لوزارة التّربية حول  النّفاذ إلى المعلومة خلال السّنة الإدارية 2024</a></h2>
+
+<div class="feat-meta"><!--span class="feat_author vcard">
+<!--?php the_author_posts_link(); ?></span-->
+<span class="feat_time entry-date"><abbr class="published" title="2025-02-25T12:54:22+00:00">25/02/2025</abbr></span>
+<span class="feat_comment"><span>التعليقات <span class="screen-reader-text"> على التّقرير السّنوي لوزارة التّربية حول  النّفاذ إلى المعلومة خلال السّنة الإدارية 2024 مغلقة</span></span></span><span class="date updated meta-no-display">2025-02-25T12:54:22+00:00</span></div>
+
+</div></article>
+</div>
+</aside>
+<aside class="home-feat-cat post_tn_cat_color_20 odd">
+<h4 class="homefeattitle feat_tn_cat_color_20"><a href="https://education.gov.tn/?cat=20">الإصدارات الهامة</a>&nbsp;&nbsp;<a title="Get Feed for الإصدارات الهامة" href="https://education.gov.tn/?cat=20/feed/"><img class="home-feat-rss" src="https://education.gov.tn/wp-content/themes/mesocolumn/images/rss2.png" alt="Get Feed for الإصدارات الهامة"></a></h4>
+<div class="homefeat">
+<article class="hentry hnews feat-post fpost feat-22535 fp0">
+
+<div class="feat-thumb"><a href="http://www.reference.education.gov.tn/2025-02-25/Rapport%20Acces_Info2024.pdf" title="التّقرير السّنوي لوزارة التّربية حول  النّفاذ إلى المعلومة خلال السّنة الإدارية 2024" target="_blank"><img width="120" height="120" class="alignleft" src="https://education.gov.tn/wp-content/uploads/2025/02/PAGE-DE-GARDE-RAPPORT-ACCES-1-150x150.jpg" alt="Echos du Ministère" title="التّقرير السّنوي لوزارة التّربية حول  النّفاذ إلى المعلومة خلال السّنة الإدارية 2024"></a></div>
+<div class="feat-right">
+<h2 class="entry-title feat-title"><a rel="bookmark" href="http://www.reference.education.gov.tn/2025-02-25/Rapport%20Acces_Info2024.pdf" title="التّقرير السّنوي لوزارة التّربية حول  النّفاذ إلى المعلومة خلال السّنة الإدارية 2024" target="_blank">التّقرير السّنوي لوزارة التّربية حول  النّفاذ إلى المعلومة خلال السّنة الإدارية 2024</a></h2>
+
+<div class="feat-meta"><!--span class="feat_author vcard">
+<!--?php the_author_posts_link(); ?>
+</span-->
+<span class="feat_time entry-date"><abbr class="published" title="2025-02-25T12:54:22+00:00">
+25/02/2025</abbr></span>
+<span class="date updated meta-no-display">2025-02-25T12:54:22+00:00</span></div>
+
+</div></article>
+<article class="feat-post apost fp1 post-22311 post type-post status-publish format-standard has-post-thumbnail hentry category-echos-du-ministere category-nos-echos category-nos-publications category-doc_ref has_thumb">
+
+<div class="feat-thumb"><a href="http://www.reference.education.gov.tn/2025-01-02/EtabSecPrives_02012025_584.pdf" title="قائمة محيّنة للمؤسسات التربوية الخاصّة (إعدادي وثانوي)" target="_blank"><img width="120" height="120" class="alignleft" src="https://education.gov.tn/wp-content/uploads/2025/01/priv%C3%A9-150x150.jpg" alt="قائمة محيّنة للمؤسسات التربوية الخاصّة (إعدادي وثانوي)" title="قائمة محيّنة للمؤسسات التربوية الخاصّة (إعدادي وثانوي)"></a></div>
+<div class="feat-right">
+<h2 class="entry-title feat-title"><a rel="bookmark" href="http://www.reference.education.gov.tn/2025-01-02/EtabSecPrives_02012025_584.pdf" title="قائمة محيّنة للمؤسسات التربوية الخاصّة (إعدادي وثانوي)" target="_blank">
+قائمة محيّنة للمؤسسات التربوية الخاصّة (إعدادي وثانوي)</a></h2>
+
+<div class="feat-meta"><!--span class="feat_author vcard">
+<!--?php the_author_posts_link(); ?></span-->
+<span class="feat_time entry-date"><abbr class="published" title="2025-01-02T15:00:44+00:00">02/01/2025</abbr></span>
+<span class="feat_comment"><span>التعليقات <span class="screen-reader-text"> على قائمة محيّنة للمؤسسات التربوية الخاصّة (إعدادي وثانوي) مغلقة</span></span></span><span class="date updated meta-no-display">2025-01-02T15:06:37+00:00</span></div>
+
+</div></article>
+<article class="feat-post apost fp2 post-22279 post type-post status-publish format-standard has-post-thumbnail hentry category-echos-du-ministere category-nos-echos category-nos-publications category-doc_ref has_thumb">
+
+<div class="feat-thumb"><a href="http://www.reference.education.gov.tn/2024-12-27/EtabSecPrives_27122024_584.pdf" title="قائمة محيّنة للمؤسسات التربوية الخاصّة (إعدادي وثانوي)" target="_blank"><img width="120" height="120" class="alignleft" src="https://education.gov.tn/wp-content/uploads/2024/12/liste-150x150.jpg" alt="قائمة محيّنة للمؤسسات التربوية الخاصّة (إعدادي وثانوي)" title="قائمة محيّنة للمؤسسات التربوية الخاصّة (إعدادي وثانوي)"></a></div>
+<div class="feat-right">
+<h2 class="entry-title feat-title"><a rel="bookmark" href="http://www.reference.education.gov.tn/2024-12-27/EtabSecPrives_27122024_584.pdf" title="قائمة محيّنة للمؤسسات التربوية الخاصّة (إعدادي وثانوي)" target="_blank">
+قائمة محيّنة للمؤسسات التربوية الخاصّة (إعدادي وثانوي)</a></h2>
+
+<div class="feat-meta"><!--span class="feat_author vcard">
+<!--?php the_author_posts_link(); ?></span-->
+<span class="feat_time entry-date"><abbr class="published" title="2024-12-27T16:16:30+00:00">27/12/2024</abbr></span>
+<span class="feat_comment"><span>التعليقات <span class="screen-reader-text"> على قائمة محيّنة للمؤسسات التربوية الخاصّة (إعدادي وثانوي) مغلقة</span></span></span><span class="date updated meta-no-display">2025-01-03T16:33:38+00:00</span></div>
+
+</div></article>
+<article class="feat-post apost fp3 post-22267 post type-post status-publish format-standard has-post-thumbnail hentry category-echos-du-ministere category-nos-echos category-nos-publications category-doc_ref has_thumb">
+
+<div class="feat-thumb"><a href="http://www.reference.education.gov.tn/2024-12-26/EtabPrimPrives_26122024_792.pdf" title="قائمة محيّنة للمؤسسات التربوية الخاصّة (ابتدائي)" target="_blank"><img width="120" height="120" class="alignleft" src="https://education.gov.tn/wp-content/uploads/2024/12/prim-150x150.jpg" alt="قائمة محيّنة للمؤسسات التربوية الخاصّة (ابتدائي)" title="قائمة محيّنة للمؤسسات التربوية الخاصّة (ابتدائي)"></a></div>
+<div class="feat-right">
+<h2 class="entry-title feat-title"><a rel="bookmark" href="http://www.reference.education.gov.tn/2024-12-26/EtabPrimPrives_26122024_792.pdf" title="قائمة محيّنة للمؤسسات التربوية الخاصّة (ابتدائي)" target="_blank">
+قائمة محيّنة للمؤسسات التربوية الخاصّة (ابتدائي)</a></h2>
+
+<div class="feat-meta"><!--span class="feat_author vcard">
+<!--?php the_author_posts_link(); ?></span-->
+<span class="feat_time entry-date"><abbr class="published" title="2024-12-26T09:45:45+00:00">26/12/2024</abbr></span>
+<span class="feat_comment"><span>التعليقات <span class="screen-reader-text"> على قائمة محيّنة للمؤسسات التربوية الخاصّة (ابتدائي) مغلقة</span></span></span><span class="date updated meta-no-display">2024-12-26T09:47:29+00:00</span></div>
+
+</div></article>
+</div>
+</aside>
+<aside class="home-feat-cat post_tn_cat_color_23">
+<h4 class="homefeattitle feat_tn_cat_color_23"><a href="https://education.gov.tn/?cat=23">نصوص فانونية/مناشير</a>&nbsp;&nbsp;<a title="Get Feed for نصوص فانونية/مناشير" href="https://education.gov.tn/?cat=23/feed/"><img class="home-feat-rss" src="https://education.gov.tn/wp-content/themes/mesocolumn/images/rss2.png" alt="Get Feed for نصوص فانونية/مناشير"></a></h4>
+<div class="homefeat">
+<article class="hentry hnews feat-post fpost feat-22531 fp0">
+
+<div class="feat-thumb"><a href="http://www.administration.education.gov.tn/2025-02-24/07062025.pdf" title="التوجيه المدرسي" target="_blank"><img width="120" height="120" class="alignleft" src="https://education.gov.tn/wp-content/uploads/2018/04/circulaire_f1.jpg" alt="Administration" title="التوجيه المدرسي"></a></div>
+<div class="feat-right">
+<h2 class="entry-title feat-title"><a rel="bookmark" href="http://www.administration.education.gov.tn/2025-02-24/07062025.pdf" title="التوجيه المدرسي" target="_blank">التوجيه المدرسي</a></h2>
+
+<div class="feat-meta"><!--span class="feat_author vcard">
+<!--?php the_author_posts_link(); ?>
+</span-->
+<span class="feat_time entry-date"><abbr class="published" title="2025-02-24T17:01:24+00:00">
+24/02/2025</abbr></span>
+<span class="date updated meta-no-display">2025-02-24T17:01:25+00:00</span></div>
+
+</div></article>
+<article class="feat-post apost fp1 post-22517 post type-post status-publish format-standard has-post-thumbnail hentry category-administration category-texte-juridique-circulaire has_thumb">
+
+<div class="feat-thumb"><a href="http://www.administration.education.gov.tn/2025-02-17/06012025.pdf" title="البرنامج الوطني للتكوين وتطوير الكفاءات بعنوان السنة المالية 2025" target="_blank"><img width="120" height="120" class="alignleft" src="https://education.gov.tn/wp-content/uploads/2018/04/circulaire_f1.jpg" alt="البرنامج الوطني للتكوين وتطوير الكفاءات بعنوان السنة المالية 2025" title="البرنامج الوطني للتكوين وتطوير الكفاءات بعنوان السنة المالية 2025"></a></div>
+<div class="feat-right">
+<h2 class="entry-title feat-title"><a rel="bookmark" href="http://www.administration.education.gov.tn/2025-02-17/06012025.pdf" title="البرنامج الوطني للتكوين وتطوير الكفاءات بعنوان السنة المالية 2025" target="_blank">
+البرنامج الوطني للتكوين وتطوير الكفاءات بعنوان السنة المالية 2025</a></h2>
+
+<div class="feat-meta"><!--span class="feat_author vcard">
+<!--?php the_author_posts_link(); ?></span-->
+<span class="feat_time entry-date"><abbr class="published" title="2025-02-17T17:04:03+00:00">17/02/2025</abbr></span>
+<span class="feat_comment"><span>التعليقات <span class="screen-reader-text"> على البرنامج الوطني للتكوين وتطوير الكفاءات بعنوان السنة المالية 2025 مغلقة</span></span></span><span class="date updated meta-no-display">2025-02-18T14:50:12+00:00</span></div>
+
+</div></article>
+<article class="feat-post apost fp2 post-22513 post type-post status-publish format-standard has-post-thumbnail hentry category-administration category-texte-juridique-circulaire has_thumb">
+
+<div class="feat-thumb"><a href="http://www.administration.education.gov.tn/2025-02-17/05062025.pdf" title="تنظيم العمل خلال شهر رمضان المعظم بالمدارس الإعدادية والمعاهد العمومية والخاصة (2024-2025)" target="_blank"><img width="120" height="120" class="alignleft" src="https://education.gov.tn/wp-content/uploads/2018/04/circulaire_f1.jpg" alt="تنظيم العمل خلال شهر رمضان المعظم بالمدارس الإعدادية والمعاهد العمومية والخاصة (2024-2025)" title="تنظيم العمل خلال شهر رمضان المعظم بالمدارس الإعدادية والمعاهد العمومية والخاصة (2024-2025)"></a></div>
+<div class="feat-right">
+<h2 class="entry-title feat-title"><a rel="bookmark" href="http://www.administration.education.gov.tn/2025-02-17/05062025.pdf" title="تنظيم العمل خلال شهر رمضان المعظم بالمدارس الإعدادية والمعاهد العمومية والخاصة (2024-2025)" target="_blank">
+تنظيم العمل خلال شهر رمضان المعظم بالمدارس الإعدادية والمعاهد العمومية والخاصة (2024-2025)</a></h2>
+
+<div class="feat-meta"><!--span class="feat_author vcard">
+<!--?php the_author_posts_link(); ?></span-->
+<span class="feat_time entry-date"><abbr class="published" title="2025-02-17T16:57:23+00:00">17/02/2025</abbr></span>
+<span class="feat_comment"><span>التعليقات <span class="screen-reader-text"> على تنظيم العمل خلال شهر رمضان المعظم بالمدارس الإعدادية والمعاهد العمومية والخاصة (2024-2025) مغلقة</span></span></span><span class="date updated meta-no-display">2025-02-17T16:57:24+00:00</span></div>
+
+</div></article>
+<article class="feat-post apost fp3 post-22511 post type-post status-publish format-standard has-post-thumbnail hentry category-administration category-texte-juridique-circulaire has_thumb">
+
+<div class="feat-thumb"><a href="http://www.administration.education.gov.tn/2025-02-14/04052025.pdf" title="تنظيم العمل اليومي خلال شهر رمضان المعظم بالمدارس الابتدائية العمومية والخاصة   (2024-2025)" target="_blank"><img width="120" height="120" class="alignleft" src="https://education.gov.tn/wp-content/uploads/2018/04/circulaire_f1.jpg" alt="تنظيم العمل اليومي خلال شهر رمضان المعظم بالمدارس الابتدائية العمومية والخاصة   (2024-2025)" title="تنظيم العمل اليومي خلال شهر رمضان المعظم بالمدارس الابتدائية العمومية والخاصة   (2024-2025)"></a></div>
+<div class="feat-right">
+<h2 class="entry-title feat-title"><a rel="bookmark" href="http://www.administration.education.gov.tn/2025-02-14/04052025.pdf" title="تنظيم العمل اليومي خلال شهر رمضان المعظم بالمدارس الابتدائية العمومية والخاصة   (2024-2025)" target="_blank">
+تنظيم العمل اليومي خلال شهر رمضان المعظم بالمدارس الابتدائية العمومية والخاصة   (2024-2025)</a></h2>
+
+<div class="feat-meta"><!--span class="feat_author vcard">
+<!--?php the_author_posts_link(); ?></span-->
+<span class="feat_time entry-date"><abbr class="published" title="2025-02-14T12:11:52+00:00">14/02/2025</abbr></span>
+<span class="feat_comment"><span>التعليقات <span class="screen-reader-text"> على تنظيم العمل اليومي خلال شهر رمضان المعظم بالمدارس الابتدائية العمومية والخاصة   (2024-2025) مغلقة</span></span></span><span class="date updated meta-no-display">2025-02-14T12:11:53+00:00</span></div>
+
+</div></article>
+</div>
+</aside>
+<aside class="home-feat-cat post_tn_cat_color_35 odd">
+<h4 class="homefeattitle feat_tn_cat_color_35"><a href="https://education.gov.tn/?cat=35">وثائق مرجعية</a>&nbsp;&nbsp;<a title="Get Feed for وثائق مرجعية" href="https://education.gov.tn/?cat=35/feed/"><img class="home-feat-rss" src="https://education.gov.tn/wp-content/themes/mesocolumn/images/rss2.png" alt="Get Feed for وثائق مرجعية"></a></h4>
+<div class="homefeat">
+<article class="hentry hnews feat-post fpost feat-22535 fp0">
+
+<div class="feat-thumb"><a href="http://www.reference.education.gov.tn/2025-02-25/Rapport%20Acces_Info2024.pdf" title="التّقرير السّنوي لوزارة التّربية حول  النّفاذ إلى المعلومة خلال السّنة الإدارية 2024" target="_blank"><img width="120" height="120" class="alignleft" src="https://education.gov.tn/wp-content/uploads/2025/02/PAGE-DE-GARDE-RAPPORT-ACCES-1-150x150.jpg" alt="Echos du Ministère" title="التّقرير السّنوي لوزارة التّربية حول  النّفاذ إلى المعلومة خلال السّنة الإدارية 2024"></a></div>
+<div class="feat-right">
+<h2 class="entry-title feat-title"><a rel="bookmark" href="http://www.reference.education.gov.tn/2025-02-25/Rapport%20Acces_Info2024.pdf" title="التّقرير السّنوي لوزارة التّربية حول  النّفاذ إلى المعلومة خلال السّنة الإدارية 2024" target="_blank">التّقرير السّنوي لوزارة التّربية حول  النّفاذ إلى المعلومة خلال السّنة الإدارية 2024</a></h2>
+
+<div class="feat-meta"><!--span class="feat_author vcard">
+<!--?php the_author_posts_link(); ?>
+</span-->
+<span class="feat_time entry-date"><abbr class="published" title="2025-02-25T12:54:22+00:00">
+25/02/2025</abbr></span>
+<span class="date updated meta-no-display">2025-02-25T12:54:22+00:00</span></div>
+
+</div></article>
+<article class="feat-post apost fp1 post-22311 post type-post status-publish format-standard has-post-thumbnail hentry category-echos-du-ministere category-nos-echos category-nos-publications category-doc_ref has_thumb">
+
+<div class="feat-thumb"><a href="http://www.reference.education.gov.tn/2025-01-02/EtabSecPrives_02012025_584.pdf" title="قائمة محيّنة للمؤسسات التربوية الخاصّة (إعدادي وثانوي)" target="_blank"><img width="120" height="120" class="alignleft" src="https://education.gov.tn/wp-content/uploads/2025/01/priv%C3%A9-150x150.jpg" alt="قائمة محيّنة للمؤسسات التربوية الخاصّة (إعدادي وثانوي)" title="قائمة محيّنة للمؤسسات التربوية الخاصّة (إعدادي وثانوي)"></a></div>
+<div class="feat-right">
+<h2 class="entry-title feat-title"><a rel="bookmark" href="http://www.reference.education.gov.tn/2025-01-02/EtabSecPrives_02012025_584.pdf" title="قائمة محيّنة للمؤسسات التربوية الخاصّة (إعدادي وثانوي)" target="_blank">
+قائمة محيّنة للمؤسسات التربوية الخاصّة (إعدادي وثانوي)</a></h2>
+
+<div class="feat-meta"><!--span class="feat_author vcard">
+<!--?php the_author_posts_link(); ?></span-->
+<span class="feat_time entry-date"><abbr class="published" title="2025-01-02T15:00:44+00:00">02/01/2025</abbr></span>
+<span class="feat_comment"><span>التعليقات <span class="screen-reader-text"> على قائمة محيّنة للمؤسسات التربوية الخاصّة (إعدادي وثانوي) مغلقة</span></span></span><span class="date updated meta-no-display">2025-01-02T15:06:37+00:00</span></div>
+
+</div></article>
+<article class="feat-post apost fp2 post-22279 post type-post status-publish format-standard has-post-thumbnail hentry category-echos-du-ministere category-nos-echos category-nos-publications category-doc_ref has_thumb">
+
+<div class="feat-thumb"><a href="http://www.reference.education.gov.tn/2024-12-27/EtabSecPrives_27122024_584.pdf" title="قائمة محيّنة للمؤسسات التربوية الخاصّة (إعدادي وثانوي)" target="_blank"><img width="120" height="120" class="alignleft" src="https://education.gov.tn/wp-content/uploads/2024/12/liste-150x150.jpg" alt="قائمة محيّنة للمؤسسات التربوية الخاصّة (إعدادي وثانوي)" title="قائمة محيّنة للمؤسسات التربوية الخاصّة (إعدادي وثانوي)"></a></div>
+<div class="feat-right">
+<h2 class="entry-title feat-title"><a rel="bookmark" href="http://www.reference.education.gov.tn/2024-12-27/EtabSecPrives_27122024_584.pdf" title="قائمة محيّنة للمؤسسات التربوية الخاصّة (إعدادي وثانوي)" target="_blank">
+قائمة محيّنة للمؤسسات التربوية الخاصّة (إعدادي وثانوي)</a></h2>
+
+<div class="feat-meta"><!--span class="feat_author vcard">
+<!--?php the_author_posts_link(); ?></span-->
+<span class="feat_time entry-date"><abbr class="published" title="2024-12-27T16:16:30+00:00">27/12/2024</abbr></span>
+<span class="feat_comment"><span>التعليقات <span class="screen-reader-text"> على قائمة محيّنة للمؤسسات التربوية الخاصّة (إعدادي وثانوي) مغلقة</span></span></span><span class="date updated meta-no-display">2025-01-03T16:33:38+00:00</span></div>
+
+</div></article>
+<article class="feat-post apost fp3 post-22267 post type-post status-publish format-standard has-post-thumbnail hentry category-echos-du-ministere category-nos-echos category-nos-publications category-doc_ref has_thumb">
+
+<div class="feat-thumb"><a href="http://www.reference.education.gov.tn/2024-12-26/EtabPrimPrives_26122024_792.pdf" title="قائمة محيّنة للمؤسسات التربوية الخاصّة (ابتدائي)" target="_blank"><img width="120" height="120" class="alignleft" src="https://education.gov.tn/wp-content/uploads/2024/12/prim-150x150.jpg" alt="قائمة محيّنة للمؤسسات التربوية الخاصّة (ابتدائي)" title="قائمة محيّنة للمؤسسات التربوية الخاصّة (ابتدائي)"></a></div>
+<div class="feat-right">
+<h2 class="entry-title feat-title"><a rel="bookmark" href="http://www.reference.education.gov.tn/2024-12-26/EtabPrimPrives_26122024_792.pdf" title="قائمة محيّنة للمؤسسات التربوية الخاصّة (ابتدائي)" target="_blank">
+قائمة محيّنة للمؤسسات التربوية الخاصّة (ابتدائي)</a></h2>
+
+<div class="feat-meta"><!--span class="feat_author vcard">
+<!--?php the_author_posts_link(); ?></span-->
+<span class="feat_time entry-date"><abbr class="published" title="2024-12-26T09:45:45+00:00">26/12/2024</abbr></span>
+<span class="feat_comment"><span>التعليقات <span class="screen-reader-text"> على قائمة محيّنة للمؤسسات التربوية الخاصّة (ابتدائي) مغلقة</span></span></span><span class="date updated meta-no-display">2024-12-26T09:47:29+00:00</span></div>
+
+</div></article>
+<article class="feat-post apost fp4 post-22235 post type-post status-publish format-standard has-post-thumbnail hentry category-echos-du-ministere category-nos-echos category-nos-publications category-doc_ref has_thumb">
+
+<div class="feat-thumb"><a href="http://www.echos.education.gov.tn/2024-12-19/Rapport_Acces_Information2023.pdf" title="التّقرير السّنوي لوزارة التّربية حول  النّفاذ إلى المعلومة خلال السّنة الإدارية 2023" target="_blank"><img width="120" height="120" class="alignleft" src="https://education.gov.tn/wp-content/uploads/2024/12/t%C3%A9l%C3%A9chargement-1-150x150.jpg" alt="التّقرير السّنوي لوزارة التّربية حول  النّفاذ إلى المعلومة خلال السّنة الإدارية 2023" title="التّقرير السّنوي لوزارة التّربية حول  النّفاذ إلى المعلومة خلال السّنة الإدارية 2023"></a></div>
+<div class="feat-right">
+<h2 class="entry-title feat-title"><a rel="bookmark" href="http://www.echos.education.gov.tn/2024-12-19/Rapport_Acces_Information2023.pdf" title="التّقرير السّنوي لوزارة التّربية حول  النّفاذ إلى المعلومة خلال السّنة الإدارية 2023" target="_blank">
+التّقرير السّنوي لوزارة التّربية حول  النّفاذ إلى المعلومة خلال السّنة الإدارية 2023</a></h2>
+
+<div class="feat-meta"><!--span class="feat_author vcard">
+<!--?php the_author_posts_link(); ?></span-->
+<span class="feat_time entry-date"><abbr class="published" title="2024-12-19T10:31:34+00:00">19/12/2024</abbr></span>
+<span class="feat_comment"><span>التعليقات <span class="screen-reader-text"> على التّقرير السّنوي لوزارة التّربية حول  النّفاذ إلى المعلومة خلال السّنة الإدارية 2023 مغلقة</span></span></span><span class="date updated meta-no-display">2024-12-19T10:31:35+00:00</span></div>
+
+</div></article>
+</div>
+</aside>
+
+
+
+</div>
+</div>
+<!-- POST ENTRY END -->
+
+
+</div><!-- CONTENT INNER END -->
+</div><!-- CONTENT END -->
+
+
+
+<div id="right-sidebar" class="sidebar right-sidebar">
+<div class="sidebar-inner">
+<div class="widget-area the-icons">
+<aside id="search-2" class="widget widget_search"><h3 class="widget-title">البحث</h3><form method="get" class="search-form" action="https://education.gov.tn/"><label><span class="screen-reader-text">بحث حول:</span><input type="search" class="search-field" placeholder="بحث …" value="" name="s" title="بحث حول:"></label> <input type="submit" class="search-submit" value="بحث"></form></aside><div id="tabber-widget"><div class="tabberlive"><ul class="tabbernav"><li class="tabberactive"><a href="javascript:void(null);" title="أحدث المقالات">أحدث المقالات</a></li><li class=""><a href="javascript:void(null);" title="الأرشيف">الأرشيف</a></li><li class=""><a href="javascript:void(null);" title="تصنيفات">تصنيفات</a></li></ul>
+		<div class="tabbertab " title=""><aside id="recent-posts-2" class="widget widget_recent_entries">		<h3>أحدث المقالات</h3>		<ul>
+											<li>
+					<a href="http://www.echos.education.gov.tn/2025-02-28/Actu_Min28022025.pdf" target="_blank">وزير التّربية يشرف على موكب توزيع تجهيزات ومعدّات إعلاميّة لفائدة المؤسّسات التّربويّة والهياكل الإدارية</a>
+									</li>
+											<li>
+					<a href="http://www.echos.education.gov.tn/2025-02-27/Actu_Min27022025.pdf" target="_blank">وزير التربية يشرف على اجتماع بالمندوبين الجهويين للتربية حول الاستعدادات لشهر رمضان لسنة 2025</a>
+									</li>
+											<li>
+					<a href="http://www.echos.education.gov.tn/2025-02-25/Actu_Min25022025.pdf" target="_blank">افتتاح أشغال الاجتماع التشاوري الثالث للإيسيسكو</a>
+									</li>
+											<li>
+					<a href="http://www.reference.education.gov.tn/2025-02-25/Rapport%20Acces_Info2024.pdf" target="_blank">التّقرير السّنوي لوزارة التّربية حول  النّفاذ إلى المعلومة خلال السّنة الإدارية 2024</a>
+									</li>
+											<li>
+					<a href="http://www.administration.education.gov.tn/2025-02-24/07062025.pdf" target="_blank">التوجيه المدرسي</a>
+									</li>
+					</ul>
+		</aside></div><div class="tabbertab tabbertabhide" title=""><aside id="archives-2" class="widget widget_archive"><h3>الأرشيف</h3>		<ul>
+				<li><a href="https://education.gov.tn/?m=202502">فبراير 2025</a></li>
+	<li><a href="https://education.gov.tn/?m=202501">يناير 2025</a></li>
+	<li><a href="https://education.gov.tn/?m=202412">ديسمبر 2024</a></li>
+	<li><a href="https://education.gov.tn/?m=202411">نوفمبر 2024</a></li>
+	<li><a href="https://education.gov.tn/?m=202410">أكتوبر 2024</a></li>
+	<li><a href="https://education.gov.tn/?m=202409">سبتمبر 2024</a></li>
+	<li><a href="https://education.gov.tn/?m=202408">أغسطس 2024</a></li>
+	<li><a href="https://education.gov.tn/?m=202407">يوليو 2024</a></li>
+	<li><a href="https://education.gov.tn/?m=202406">يونيو 2024</a></li>
+	<li><a href="https://education.gov.tn/?m=202405">مايو 2024</a></li>
+	<li><a href="https://education.gov.tn/?m=202404">أبريل 2024</a></li>
+	<li><a href="https://education.gov.tn/?m=202403">مارس 2024</a></li>
+	<li><a href="https://education.gov.tn/?m=202402">فبراير 2024</a></li>
+	<li><a href="https://education.gov.tn/?m=202401">يناير 2024</a></li>
+	<li><a href="https://education.gov.tn/?m=202312">ديسمبر 2023</a></li>
+	<li><a href="https://education.gov.tn/?m=202311">نوفمبر 2023</a></li>
+	<li><a href="https://education.gov.tn/?m=202310">أكتوبر 2023</a></li>
+	<li><a href="https://education.gov.tn/?m=202309">سبتمبر 2023</a></li>
+	<li><a href="https://education.gov.tn/?m=202308">أغسطس 2023</a></li>
+	<li><a href="https://education.gov.tn/?m=202307">يوليو 2023</a></li>
+	<li><a href="https://education.gov.tn/?m=202306">يونيو 2023</a></li>
+	<li><a href="https://education.gov.tn/?m=202305">مايو 2023</a></li>
+	<li><a href="https://education.gov.tn/?m=202304">أبريل 2023</a></li>
+	<li><a href="https://education.gov.tn/?m=202303">مارس 2023</a></li>
+	<li><a href="https://education.gov.tn/?m=202302">فبراير 2023</a></li>
+	<li><a href="https://education.gov.tn/?m=202301">يناير 2023</a></li>
+	<li><a href="https://education.gov.tn/?m=202212">ديسمبر 2022</a></li>
+	<li><a href="https://education.gov.tn/?m=202211">نوفمبر 2022</a></li>
+	<li><a href="https://education.gov.tn/?m=202210">أكتوبر 2022</a></li>
+	<li><a href="https://education.gov.tn/?m=202209">سبتمبر 2022</a></li>
+	<li><a href="https://education.gov.tn/?m=202208">أغسطس 2022</a></li>
+	<li><a href="https://education.gov.tn/?m=202207">يوليو 2022</a></li>
+	<li><a href="https://education.gov.tn/?m=202206">يونيو 2022</a></li>
+	<li><a href="https://education.gov.tn/?m=202205">مايو 2022</a></li>
+	<li><a href="https://education.gov.tn/?m=202204">أبريل 2022</a></li>
+	<li><a href="https://education.gov.tn/?m=202203">مارس 2022</a></li>
+	<li><a href="https://education.gov.tn/?m=202202">فبراير 2022</a></li>
+	<li><a href="https://education.gov.tn/?m=202201">يناير 2022</a></li>
+	<li><a href="https://education.gov.tn/?m=202112">ديسمبر 2021</a></li>
+	<li><a href="https://education.gov.tn/?m=202111">نوفمبر 2021</a></li>
+	<li><a href="https://education.gov.tn/?m=202110">أكتوبر 2021</a></li>
+	<li><a href="https://education.gov.tn/?m=202109">سبتمبر 2021</a></li>
+	<li><a href="https://education.gov.tn/?m=202108">أغسطس 2021</a></li>
+	<li><a href="https://education.gov.tn/?m=202107">يوليو 2021</a></li>
+	<li><a href="https://education.gov.tn/?m=202106">يونيو 2021</a></li>
+	<li><a href="https://education.gov.tn/?m=202105">مايو 2021</a></li>
+	<li><a href="https://education.gov.tn/?m=202104">أبريل 2021</a></li>
+	<li><a href="https://education.gov.tn/?m=202103">مارس 2021</a></li>
+	<li><a href="https://education.gov.tn/?m=202102">فبراير 2021</a></li>
+	<li><a href="https://education.gov.tn/?m=202101">يناير 2021</a></li>
+	<li><a href="https://education.gov.tn/?m=202012">ديسمبر 2020</a></li>
+	<li><a href="https://education.gov.tn/?m=202011">نوفمبر 2020</a></li>
+	<li><a href="https://education.gov.tn/?m=202010">أكتوبر 2020</a></li>
+	<li><a href="https://education.gov.tn/?m=202009">سبتمبر 2020</a></li>
+	<li><a href="https://education.gov.tn/?m=202008">أغسطس 2020</a></li>
+	<li><a href="https://education.gov.tn/?m=202007">يوليو 2020</a></li>
+	<li><a href="https://education.gov.tn/?m=202006">يونيو 2020</a></li>
+	<li><a href="https://education.gov.tn/?m=202005">مايو 2020</a></li>
+	<li><a href="https://education.gov.tn/?m=202004">أبريل 2020</a></li>
+	<li><a href="https://education.gov.tn/?m=202003">مارس 2020</a></li>
+	<li><a href="https://education.gov.tn/?m=202002">فبراير 2020</a></li>
+	<li><a href="https://education.gov.tn/?m=202001">يناير 2020</a></li>
+	<li><a href="https://education.gov.tn/?m=201912">ديسمبر 2019</a></li>
+	<li><a href="https://education.gov.tn/?m=201911">نوفمبر 2019</a></li>
+	<li><a href="https://education.gov.tn/?m=201910">أكتوبر 2019</a></li>
+	<li><a href="https://education.gov.tn/?m=201909">سبتمبر 2019</a></li>
+	<li><a href="https://education.gov.tn/?m=201908">أغسطس 2019</a></li>
+	<li><a href="https://education.gov.tn/?m=201907">يوليو 2019</a></li>
+	<li><a href="https://education.gov.tn/?m=201906">يونيو 2019</a></li>
+	<li><a href="https://education.gov.tn/?m=201904">أبريل 2019</a></li>
+	<li><a href="https://education.gov.tn/?m=201903">مارس 2019</a></li>
+	<li><a href="https://education.gov.tn/?m=201902">فبراير 2019</a></li>
+	<li><a href="https://education.gov.tn/?m=201901">يناير 2019</a></li>
+	<li><a href="https://education.gov.tn/?m=201812">ديسمبر 2018</a></li>
+	<li><a href="https://education.gov.tn/?m=201811">نوفمبر 2018</a></li>
+	<li><a href="https://education.gov.tn/?m=201810">أكتوبر 2018</a></li>
+	<li><a href="https://education.gov.tn/?m=201809">سبتمبر 2018</a></li>
+	<li><a href="https://education.gov.tn/?m=201808">أغسطس 2018</a></li>
+	<li><a href="https://education.gov.tn/?m=201807">يوليو 2018</a></li>
+	<li><a href="https://education.gov.tn/?m=201806">يونيو 2018</a></li>
+	<li><a href="https://education.gov.tn/?m=201805">مايو 2018</a></li>
+	<li><a href="https://education.gov.tn/?m=201804">أبريل 2018</a></li>
+	<li><a href="https://education.gov.tn/?m=201803">مارس 2018</a></li>
+	<li><a href="https://education.gov.tn/?m=201802">فبراير 2018</a></li>
+	<li><a href="https://education.gov.tn/?m=201801">يناير 2018</a></li>
+	<li><a href="https://education.gov.tn/?m=201712">ديسمبر 2017</a></li>
+	<li><a href="https://education.gov.tn/?m=201711">نوفمبر 2017</a></li>
+	<li><a href="https://education.gov.tn/?m=201710">أكتوبر 2017</a></li>
+	<li><a href="https://education.gov.tn/?m=201709">سبتمبر 2017</a></li>
+	<li><a href="https://education.gov.tn/?m=201703">مارس 2017</a></li>
+	<li><a href="https://education.gov.tn/?m=201702">فبراير 2017</a></li>
+	<li><a href="https://education.gov.tn/?m=201701">يناير 2017</a></li>
+	<li><a href="https://education.gov.tn/?m=201611">نوفمبر 2016</a></li>
+	<li><a href="https://education.gov.tn/?m=201609">سبتمبر 2016</a></li>
+	<li><a href="https://education.gov.tn/?m=201608">أغسطس 2016</a></li>
+	<li><a href="https://education.gov.tn/?m=201607">يوليو 2016</a></li>
+	<li><a href="https://education.gov.tn/?m=201606">يونيو 2016</a></li>
+		</ul>
+			</aside></div><div class="tabbertab tabbertabhide" title=""><aside id="categories-2" class="widget widget_categories"><h3>تصنيفات</h3>		<ul>
+				<li class="cat-item cat-item-33"><a href="https://education.gov.tn/?cat=33">Accès aux documents administratifs</a>
+</li>
+	<li class="cat-item cat-item-30"><a href="https://education.gov.tn/?cat=30">Accueil</a>
+</li>
+	<li class="cat-item cat-item-27"><a href="https://education.gov.tn/?cat=27">Activités</a>
+</li>
+	<li class="cat-item cat-item-26"><a href="https://education.gov.tn/?cat=26">Administration</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="https://education.gov.tn/?cat=8">Année scolaire 2017-2018</a>
+</li>
+	<li class="cat-item cat-item-22"><a href="https://education.gov.tn/?cat=22">Avis</a>
+</li>
+	<li class="cat-item cat-item-21"><a href="https://education.gov.tn/?cat=21">Concours Externe</a>
+</li>
+	<li class="cat-item cat-item-19"><a href="https://education.gov.tn/?cat=19">Concours Interne</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://education.gov.tn/?cat=1">Déontologie de l’agent public</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="https://education.gov.tn/?cat=10">Documentation</a>
+</li>
+	<li class="cat-item cat-item-29"><a href="https://education.gov.tn/?cat=29">Echos des régions</a>
+</li>
+	<li class="cat-item cat-item-28"><a href="https://education.gov.tn/?cat=28">Echos du Ministère</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="https://education.gov.tn/?cat=3" title="mlk">Le Ministère</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="https://education.gov.tn/?cat=7">Projets et programmes</a>
+</li>
+	<li class="cat-item cat-item-25"><a href="https://education.gov.tn/?cat=25">Vie scolaire</a>
+</li>
+	<li class="cat-item cat-item-24"><a href="https://education.gov.tn/?cat=24">أخبارنا</a>
+</li>
+	<li class="cat-item cat-item-20"><a href="https://education.gov.tn/?cat=20">الإصدارات الهامة</a>
+</li>
+	<li class="cat-item cat-item-18"><a href="https://education.gov.tn/?cat=18">المناظرات المهنية</a>
+</li>
+	<li class="cat-item cat-item-31"><a href="https://education.gov.tn/?cat=31">النفاذ إلى المعلومة</a>
+</li>
+	<li class="cat-item cat-item-36"><a href="https://education.gov.tn/?cat=36">نشاط الوزير</a>
+</li>
+	<li class="cat-item cat-item-23"><a href="https://education.gov.tn/?cat=23">نصوص فانونية/مناشير</a>
+</li>
+	<li class="cat-item cat-item-35"><a href="https://education.gov.tn/?cat=35">وثائق مرجعية</a>
+</li>
+		</ul>
+			</aside></div></div></div>
+<aside id="nav_menu-2" class="widget widget_nav_menu"><h3 class="widget-title">الأرشيف (2011-2024)</h3><div class="menu-menu-de-droite-container"><ul id="menu-menu-de-droite" class="menu"><li id="menu-item-17802" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17802"><a target="_blank" rel="noopener noreferrer" href="http://www.edunet.tn/tarbia/circulaire/circulaires_2025.php">أرشيف المناشير</a></li>
+<li id="menu-item-168" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-168"><a target="_blank" rel="noopener noreferrer" href="http://www.education.gov.tn/?cat=23">المناشير</a></li>
+<li id="menu-item-117" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-117"><a target="_blank" rel="noopener noreferrer" href="http://www.edunet.tn/index.php?id=1534&amp;lan=1">المناظرات المهنية (2011-2025)</a></li>
+<li id="menu-item-116" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-116"><a href="https://education.gov.tn/?page_id=112">الإصدارات (2011-2025)</a></li>
+<li id="menu-item-169" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-169"><a href="https://education.gov.tn/?page_id=164">أخبارنا (2011-2025)</a></li>
+</ul></div></aside></div>
+</div><!-- SIDEBAR-INNER END -->
+</div><!-- RIGHT SIDEBAR END -->
+
+
+</div><!-- CONTAINER WRAP END -->
+
+</div><!-- CONTAINER END -->
+
+</div><!-- BODYCONTENT END -->
+
+</div><!-- INNERWRAP BODYWRAP END -->
+
+</div><!-- WRAPPER MAIN END -->
+
+</div><!-- WRAPPER END -->
+
+
+<footer class="footer-top"><div class="innerwrap"><div class="ftop"><div class="footer-container-wrap">
+
+<div class="fbox footer-one"><div class="widget-area the-icons">
+</div></div>
+
+
+
+
+</div></div></div></footer>
+
+
+<footer class="footer-bottom">
+<div class="innerwrap">
+<div class="fbottom">
+<div class="footer-left">
+جميع الحقوق محفوظة ©;2025. الموقع الرسمي لوزارة التربية</div>
+<div class="footer-right">
+<!-- Mesocolumn Theme by Dezzain, download and info at https://wordpress.org/themes/mesocolumn --></div>
+</div>
+</div>
+</footer>
+<!-- FOOTER BOTTOM END -->
+
+
+</div>
+<!-- SECBODY END -->
+
+<script type="text/javascript" src="https://education.gov.tn/wp-includes/js/hoverIntent.js?ver=1.8.1"></script>
+<script type="text/javascript" src="https://education.gov.tn/wp-content/themes/mesocolumn/lib/scripts/modernizr/modernizr.js?ver=1.6.5.1"></script>
+<script type="text/javascript" src="https://education.gov.tn/wp-content/themes/mesocolumn/lib/scripts/tabber/tabber.js?ver=1.6.5.1"></script>
+<script type="text/javascript" src="https://education.gov.tn/wp-content/themes/mesocolumn/lib/scripts/superfish-menu/js/superfish.js?ver=1.6.5.1"></script>
+<script type="text/javascript" src="https://education.gov.tn/wp-content/themes/mesocolumn/lib/scripts/superfish-menu/js/supersubs.js?ver=1.6.5.1"></script>
+<script type="text/javascript" src="https://education.gov.tn/wp-content/themes/mesocolumn/lib/scripts/custom.js?ver=1.6.5.1"></script><style type="text/css">.tabber{display:none;}</style>
+<script type="text/javascript" src="https://education.gov.tn/wp-content/plugins/page-links-to/js/new-tab.min.js?ver=3.1.2"></script>
+<script type="text/javascript" src="https://education.gov.tn/wp-includes/js/wp-embed.js?ver=5.2.21"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var mcgrid = {"grid":"true"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://education.gov.tn/wp-content/plugins/my-calendar/js/mc-grid.js?ver=5.2.21"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var mclist = {"list":"true"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://education.gov.tn/wp-content/plugins/my-calendar/js/mc-list.js?ver=5.2.21"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var mcmini = {"mini":"true"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://education.gov.tn/wp-content/plugins/my-calendar/js/mc-mini.js?ver=5.2.21"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var mcAjax = {"ajax":"true"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://education.gov.tn/wp-content/plugins/my-calendar/js/mc-ajax.js?ver=5.2.21"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var my_calendar = {"newWindow":"Opens in new tab"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://education.gov.tn/wp-content/plugins/my-calendar/js/mcjs.js?ver=5.2.21"></script>
+
+
+
+</body></html>

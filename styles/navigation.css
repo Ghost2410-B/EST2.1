@@ -1,0 +1,361 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+nav{
+    position: sticky;
+    top: 8px;
+    height:6.5vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(0, 0%, 50%);
+    border-top: 2px solid rgb(221, 255, 248);
+    margin-top: -1%;
+    z-index: 999;
+    animation: slid-down-entry 0.6s ease-in;
+}
+
+
+@keyframes slid-down-entry {
+    from{transform: translateY(-100px);opacity: 0%;}
+    to{transform: translateY(0);opacity: 100%;}
+    
+}
+
+@keyframes slid-into-entry {
+    from{transform: scale(70%);opacity: 0%;}
+    to{transform: scale(100%);opacity: 100%;}
+    
+}
+
+
+nav .responsive{
+    background-color: rgba(0, 119, 255, 0.911);
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    height: 100%;
+    width: 4em;
+    display: flex;
+    flex-direction: column  ;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .responsive button{
+    height:1em;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+}
+
+nav .responsive i{
+    font-size: 1.6em;
+    transition-property: transform ;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+nav .responsive:hover i{
+    transform: scale(150%);
+    cursor: pointer;
+}
+
+
+
+
+/*no responsive*/
+nav #no-responsive-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid gold;
+    height: 100%;
+}
+
+
+
+
+nav .no-responsive{
+    background-color: rgba(0, 255, 208, 0);
+    border-right: 4px solid transparent;
+    width: 10em;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 1em;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    border-right: 2px solid blue;
+}
+
+
+nav .no-responsive>button {
+    font-size: 1em;
+    font-weight: 600;
+    color: rgb(30, 30, 30);
+    background-color: transparent;
+    border: none;
+}
+
+
+
+nav .no-responsive:hover>button{
+    animation:to-italic 0.2s ease-in-out ;
+    font-style: italic;
+    font-family:sans-serif;
+    font-weight: 600;
+}
+
+@keyframes to-italic {
+    0%{
+        transform: translateY(1em);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+    
+}
+ 
+
+
+nav button a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.dropdown-menus{
+    height: fit-content;
+    width: fit-content;
+    background-color: hsl(0, 0%, 70%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2em;
+    position: absolute;
+    padding: 2px;
+    top: 2.5em;
+    left: 0em;
+    border-radius: 0.1em;
+    border-top: 2px solid rgb(31, 26, 159);
+    display: none;
+}
+
+
+@keyframes show-nav {
+    from{
+        display: none;
+        opacity: 50%;
+        transform: translateY(0.5em);
+    }
+    
+    to{
+        display: flex;
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+
+
+.dropdown-menus .dropdown-menus2{
+    height: fit-content;
+    width: fit-content;
+    background-color: hsl(0, 2%, 75%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2em;
+    position: absolute;
+    left: 17.2em;
+    padding: 2px;
+    opacity: 0%;
+    border-radius: 0.2em;
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    border-top: 2px solid rgb(22, 22, 50);
+}
+
+.dropdown-menus button{
+    font-size: larger;
+    font-weight: 400;
+    background-color: transparent;
+    border:none;
+    width: 15em;
+    height: 2.7em;
+    transition: all 0.1s ease-in-out ;
+    cursor: pointer;
+    border-bottom: 2px solid gray;
+}
+
+
+.dropdown-menus button:hover{
+    background-color: rgb(18, 145, 224);
+    text-decoration: underline;
+}
+.dropdown-menus2 a button:hover{
+    background-color: rgb(18, 145, 224);
+    text-decoration: underline;
+}
+
+
+.dropdown-menus .dropdown-menus2 button{
+    font-size: larger;
+    font-weight: 400;
+    background-color: transparent;
+    border:none;
+    width: 15em;
+    height: 2em;
+    transition: all 0.1s ease-in-out ;
+    cursor: pointer;
+    border-bottom: 2px solid rgb(78, 78, 78);
+}
+
+
+#instances-dropdown{
+    bottom: 9.2em;
+
+}
+#departement-dropdown{
+    top:20.8em;
+
+}
+
+
+#dut-dropdown{
+    top: 0.01em;
+
+}
+
+#licence-dropdown{
+    top: 3.3em;
+
+}
+
+#instances:hover #instances-dropdown{
+    display: flex;
+    opacity: 100%;
+    transform: translateX(1em);
+}
+
+#departement:hover #departement-dropdown{
+    display: flex;
+    opacity: 100%;
+    transform: translateX(1em);
+}
+
+
+#dut:hover #dut-dropdown{
+    display: flex;
+    opacity: 100%;
+    transform: translateX(1em);
+}
+
+#licence:hover #licence-dropdown{
+    display: flex;
+    opacity: 100%;
+    transform: translateX(1em);
+}
+
+
+
+
+#estdefes:hover #estdefes-dropdown{
+    display: flex;
+    animation: show-nav 0.3s ease-in-out ;
+}
+#formations:hover #formations-dropdown{
+    display: flex;
+    opacity: 100%;
+    animation: show-nav 0.3s ease-in-out ;
+
+}
+#recherche:hover #recherche-dropdown{
+    display: flex;
+    opacity: 100%;
+    animation: show-nav 0.3s ease-in-out ;
+
+}
+#partenariats:hover #partenariats-dropdown{
+    display: flex;
+    opacity: 100%;
+    animation: show-nav 0.3s ease-in-out ;
+
+}
+#vieestudiantine:hover #vieestudiantine-dropdown{
+    display: flex;
+    opacity: 100%;
+    animation: show-nav 0.3s ease-in-out ;
+
+}
+
+
+
+
+/*compatibility*/
+
+
+
+
+
+@media (width<1000px) {
+    nav{
+        width: 230dvw;
+        height: 10vh;
+        gap: 10em;
+    }
+
+    nav #no-responsive-container{
+        position: absolute;
+        flex-direction: column;
+        height: fit-content;
+        width: fit-content;
+        right: 0px;
+        top: 2.5em;
+        overflow: scroll;
+    }
+    nav .no-responsive{
+        width: 180vw;
+        height: 5em;
+        background-color: aliceblue;
+        border-top: 2px solid gray;
+    }
+
+
+    
+.dropdown-menus{
+    height: fit-content;
+    width: fit-content;
+    background-color: hsl(0, 0%, 70%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2em;
+    position: relative;
+    padding: 2px;
+    top: 2.5em;
+    left: 0em;
+    border-radius: 0.1em;
+    border-top: 2px solid rgb(31, 26, 159);
+    display: none;
+}
+
+
+
+    nav .responsive{
+        position: relative;
+    }
+
+    
+}
+
